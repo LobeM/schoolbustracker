@@ -15,11 +15,13 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
+    private FirebaseDatabase mDatabase;
 
-    EditText mEditTextEmail, mEditTextPassword;
+    EditText mEditTextEmail, mEditTextPassword, mEditTextFullName;
     ProgressBar mProgressBar;
 
     @Override
@@ -28,7 +30,9 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
         mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance();
 
+        mEditTextFullName = findViewById(R.id.editTextFullName);
         mEditTextEmail = findViewById(R.id.editTextEmail);
         mEditTextPassword = findViewById(R.id.editTextPassword);
         mProgressBar = findViewById(R.id.progressBar);
@@ -43,8 +47,15 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void registerUser() {
-        String email = mEditTextEmail.getText().toString().trim();
+        final String fullName = mEditTextFullName.getText().toString().trim();
+        final String email = mEditTextEmail.getText().toString().trim();
         String password = mEditTextPassword.getText().toString().trim();
+
+        if (fullName.isEmpty()) {
+            mEditTextFullName.setError("Full name is required");
+            mEditTextFullName.requestFocus();
+            return;
+        }
 
         if (email.isEmpty()) {
             mEditTextEmail.setError("Email is required");
@@ -77,11 +88,23 @@ public class SignUpActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 mProgressBar.setVisibility(View.GONE);
                 if (task.isSuccessful()) {
-                    Toast.makeText(getApplicationContext(), "Registration successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(SignUpActivity.this, HomeActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent);
+                    User user = new User(fullName, email);
+                    mDatabase.getReference("Users")
+                            .child(mAuth.getCurrentUser().getUid())
+                            .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(getApplicationContext(), "Registration successful", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(SignUpActivity.this, HomeActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
                 } else {
                     Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }

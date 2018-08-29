@@ -201,8 +201,6 @@ MERGED from [com.google.firebase:firebase-config:11.4.0] /Users/lobemusonda/.and
 MERGED from [com.google.android.gms:play-services-awareness:11.4.0] /Users/lobemusonda/.android/build-cache/a018aaeebdc78296d0e5c26bc03a1c855d6ac686/output/AndroidManifest.xml:17:5-43
 MERGED from [com.google.firebase:firebase-crash:11.4.0] /Users/lobemusonda/.android/build-cache/d1e85fa6bcea3e8ee2ec14ee0562b90faee10b5c/output/AndroidManifest.xml:20:5-43
 MERGED from [com.google.android.gms:play-services-fido:11.4.0] /Users/lobemusonda/.android/build-cache/c0f164d8d10644275d41556a2400f02783229396/output/AndroidManifest.xml:4:3-41
-MERGED from [com.google.firebase:firebase-database:11.4.0] /Users/lobemusonda/.android/build-cache/906788b0c2fd75be56c41004e732d546188f4677/output/AndroidManifest.xml:3:5-43
-MERGED from [com.google.firebase:firebase-database-connection:11.4.0] /Users/lobemusonda/.android/build-cache/e4b32dd28e78f4f612891ff08b940c9fe40ce135/output/AndroidManifest.xml:3:5-43
 MERGED from [com.google.firebase:firebase-dynamic-links:11.4.0] /Users/lobemusonda/.android/build-cache/acf2bb4e6566e9066034334c2ce641dc6d44d9fa/output/AndroidManifest.xml:3:3-41
 MERGED from [com.google.firebase:firebase-messaging:11.4.0] /Users/lobemusonda/.android/build-cache/c70fb5131640d0330a136b55bec616d6a71ad5a0/output/AndroidManifest.xml:17:5-43
 MERGED from [com.google.firebase:firebase-storage:11.4.0] /Users/lobemusonda/.android/build-cache/a3146c13e284cae762cc8bdcea1697225a291f1f/output/AndroidManifest.xml:3:5-43
@@ -237,6 +235,8 @@ MERGED from [com.google.firebase:firebase-analytics-impl:11.4.0] /Users/lobemuso
 MERGED from [com.google.firebase:firebase-iid:11.4.0] /Users/lobemusonda/.android/build-cache/6374a9012fff4a0a73fb3e1f630430006269eda1/output/AndroidManifest.xml:17:5-43
 MERGED from [com.google.firebase:firebase-auth:11.4.0] /Users/lobemusonda/.android/build-cache/80af7ac68aff591a8a4058aed21e0358323b87f4/output/AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-base:11.4.0] /Users/lobemusonda/.android/build-cache/43f1958ff0e3a4a6e25dc46b0b3166d497d8f8b9/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-database:11.4.0] /Users/lobemusonda/.android/build-cache/906788b0c2fd75be56c41004e732d546188f4677/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-database-connection:11.4.0] /Users/lobemusonda/.android/build-cache/e4b32dd28e78f4f612891ff08b940c9fe40ce135/output/AndroidManifest.xml:3:5-43
 MERGED from [com.google.firebase:firebase-common:11.4.0] /Users/lobemusonda/.android/build-cache/efdbca57b33839a19f0696adf02224835f8e2746/output/AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-tasks:11.4.0] /Users/lobemusonda/.android/build-cache/f130207b20ec19b361271a66c26e971f412a99cc/output/AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-basement:11.4.0] /Users/lobemusonda/.android/build-cache/d7a84c5578f6289c42b5ae23888820ebbb1411d5/output/AndroidManifest.xml:17:5-43
