@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/interpolator/mr_linear_out_slow_in.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/deac282100992f6ec9c1f2475968796c0e61033b/output/res/interpolator/mr_linear_out_slow_in.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/interpolator/mr_fast_out_slow_in.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/deac282100992f6ec9c1f2475968796c0e61033b/output/res/interpolator/mr_fast_out_slow_in.xml"
+    }
+]

@@ -1,0 +1,1450 @@
+[
+    {
+        "outputFile": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 103,
+                    "endOffset": 154
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/e777b916a326506d50ed679174b8a1b5ecbe409f/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 159,
+                    "endColumn": 63,
+                    "endOffset": 218
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/e777b916a326506d50ed679174b8a1b5ecbe409f/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 223,
+                    "endColumn": 66,
+                    "endOffset": 285
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/e777b916a326506d50ed679174b8a1b5ecbe409f/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 290,
+                    "endColumn": 63,
+                    "endOffset": 349
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/e777b916a326506d50ed679174b8a1b5ecbe409f/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 354,
+                    "endLine": 11,
+                    "endColumn": 12,
+                    "endOffset": 633
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/res/values-v21/styles.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 7,
+                        "endColumn": 12,
+                        "endOffset": 334
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 638,
+                    "endColumn": 90,
+                    "endOffset": 724
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 729,
+                    "endColumn": 102,
+                    "endOffset": 827
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 832,
+                    "endColumn": 102,
+                    "endOffset": 930
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 935,
+                    "endColumn": 104,
+                    "endOffset": 1035
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1040,
+                    "endColumn": 106,
+                    "endOffset": 1142
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1147,
+                    "endColumn": 108,
+                    "endOffset": 1251
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1256,
+                    "endColumn": 108,
+                    "endOffset": 1360
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1365,
+                    "endColumn": 108,
+                    "endOffset": 1469
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1474,
+                    "endColumn": 108,
+                    "endOffset": 1578
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1583,
+                    "endColumn": 108,
+                    "endOffset": 1687
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1692,
+                    "endColumn": 106,
+                    "endOffset": 1794
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1799,
+                    "endColumn": 102,
+                    "endOffset": 1897
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1902,
+                    "endColumn": 118,
+                    "endOffset": 2016
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2021,
+                    "endLine": 26,
+                    "endColumn": 12,
+                    "endOffset": 2171
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2176,
+                    "endLine": 28,
+                    "endColumn": 12,
+                    "endOffset": 2326
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 2331,
+                    "endColumn": 104,
+                    "endOffset": 2431
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 2436,
+                    "endColumn": 120,
+                    "endOffset": 2552
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 2557,
+                    "endColumn": 100,
+                    "endOffset": 2653
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 2658,
+                    "endLine": 33,
+                    "endColumn": 12,
+                    "endOffset": 2800
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 2805,
+                    "endLine": 35,
+                    "endColumn": 12,
+                    "endOffset": 2941
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 2946,
+                    "endColumn": 102,
+                    "endOffset": 3044
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 3049,
+                    "endColumn": 118,
+                    "endOffset": 3163
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 3168,
+                    "endColumn": 106,
+                    "endOffset": 3270
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 3275,
+                    "endColumn": 102,
+                    "endOffset": 3373
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 3378,
+                    "endLine": 41,
+                    "endColumn": 12,
+                    "endOffset": 3528
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 3533,
+                    "endLine": 43,
+                    "endColumn": 12,
+                    "endOffset": 3699
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 3704,
+                    "endLine": 45,
+                    "endColumn": 12,
+                    "endOffset": 3848
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 3853,
+                    "endLine": 47,
+                    "endColumn": 12,
+                    "endOffset": 4013
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 4018,
+                    "endLine": 49,
+                    "endColumn": 12,
+                    "endOffset": 4170
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 4175,
+                    "endLine": 51,
+                    "endColumn": 12,
+                    "endOffset": 4321
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 4326,
+                    "endColumn": 118,
+                    "endOffset": 4440
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 4445,
+                    "endLine": 57,
+                    "endColumn": 12,
+                    "endOffset": 4812
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 4817,
+                    "endLine": 59,
+                    "endColumn": 12,
+                    "endOffset": 4961
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 60,
+                    "startColumn": 4,
+                    "startOffset": 4966,
+                    "endLine": 61,
+                    "endColumn": 12,
+                    "endOffset": 5110
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 62,
+                    "startColumn": 4,
+                    "startOffset": 5115,
+                    "endColumn": 111,
+                    "endOffset": 5222
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 63,
+                    "startColumn": 4,
+                    "startOffset": 5227,
+                    "endColumn": 146,
+                    "endOffset": 5369
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 64,
+                    "startColumn": 4,
+                    "startOffset": 5374,
+                    "endLine": 65,
+                    "endColumn": 12,
+                    "endOffset": 5522
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 66,
+                    "startColumn": 4,
+                    "startOffset": 5527,
+                    "endLine": 67,
+                    "endColumn": 12,
+                    "endOffset": 5669
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 68,
+                    "startColumn": 4,
+                    "startOffset": 5674,
+                    "endColumn": 74,
+                    "endOffset": 5744
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 69,
+                    "startColumn": 4,
+                    "startOffset": 5749,
+                    "endColumn": 88,
+                    "endOffset": 5833
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 70,
+                    "startColumn": 4,
+                    "startOffset": 5838,
+                    "endColumn": 86,
+                    "endOffset": 5920
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 71,
+                    "startColumn": 4,
+                    "startOffset": 5925,
+                    "endColumn": 100,
+                    "endOffset": 6021
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 72,
+                    "startColumn": 4,
+                    "startOffset": 6026,
+                    "endColumn": 102,
+                    "endOffset": 6124
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 73,
+                    "startColumn": 4,
+                    "startOffset": 6129,
+                    "endLine": 116,
+                    "endColumn": 12,
+                    "endOffset": 8976
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 117,
+                    "startColumn": 4,
+                    "startOffset": 8981,
+                    "endLine": 119,
+                    "endColumn": 12,
+                    "endOffset": 9162
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 120,
+                    "startColumn": 4,
+                    "startOffset": 9167,
+                    "endLine": 163,
+                    "endColumn": 12,
+                    "endOffset": 12026
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 164,
+                    "startColumn": 4,
+                    "startOffset": 12031,
+                    "endLine": 166,
+                    "endColumn": 12,
+                    "endOffset": 12224
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 167,
+                    "startColumn": 4,
+                    "startOffset": 12229,
+                    "endLine": 169,
+                    "endColumn": 12,
+                    "endOffset": 12424
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 170,
+                    "startColumn": 4,
+                    "startOffset": 12429,
+                    "endLine": 172,
+                    "endColumn": 12,
+                    "endOffset": 12635
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/50f596f1cab3bf814015c1b3f31c3f23adce3bca/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 173,
+                    "startColumn": 4,
+                    "startOffset": 12640,
+                    "endLine": 174,
+                    "endColumn": 12,
+                    "endOffset": 12758
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 175,
+                    "startColumn": 4,
+                    "startOffset": 12763,
+                    "endLine": 176,
+                    "endColumn": 12,
+                    "endOffset": 12881
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 177,
+                    "startColumn": 4,
+                    "startOffset": 12886,
+                    "endLine": 178,
+                    "endColumn": 12,
+                    "endOffset": 12994
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 179,
+                    "startColumn": 4,
+                    "startOffset": 12999,
+                    "endLine": 181,
+                    "endColumn": 12,
+                    "endOffset": 13177
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 182,
+                    "startColumn": 4,
+                    "startOffset": 13182,
+                    "endLine": 183,
+                    "endColumn": 12,
+                    "endOffset": 13308
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 184,
+                    "startColumn": 4,
+                    "startOffset": 13313,
+                    "endLine": 186,
+                    "endColumn": 12,
+                    "endOffset": 13509
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 187,
+                    "startColumn": 4,
+                    "startOffset": 13514,
+                    "endColumn": 88,
+                    "endOffset": 13598
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 188,
+                    "startColumn": 4,
+                    "startOffset": 13603,
+                    "endColumn": 110,
+                    "endOffset": 13709
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 189,
+                    "startColumn": 4,
+                    "startOffset": 13714,
+                    "endLine": 191,
+                    "endColumn": 12,
+                    "endOffset": 13942
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 192,
+                    "startColumn": 4,
+                    "startOffset": 13947,
+                    "endColumn": 100,
+                    "endOffset": 14043
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 193,
+                    "startColumn": 4,
+                    "startOffset": 14048,
+                    "endColumn": 94,
+                    "endOffset": 14138
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 194,
+                    "startColumn": 4,
+                    "startOffset": 14143,
+                    "endColumn": 122,
+                    "endOffset": 14261
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 195,
+                    "startColumn": 4,
+                    "startOffset": 14266,
+                    "endColumn": 128,
+                    "endOffset": 14390
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 196,
+                    "startColumn": 4,
+                    "startOffset": 14395,
+                    "endColumn": 116,
+                    "endOffset": 14507
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 197,
+                    "startColumn": 4,
+                    "startOffset": 14512,
+                    "endLine": 199,
+                    "endColumn": 12,
+                    "endOffset": 14684
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 200,
+                    "startColumn": 4,
+                    "startOffset": 14689,
+                    "endColumn": 98,
+                    "endOffset": 14783
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 201,
+                    "startColumn": 4,
+                    "startOffset": 14788,
+                    "endLine": 202,
+                    "endColumn": 12,
+                    "endOffset": 14918
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 203,
+                    "startColumn": 4,
+                    "startOffset": 14923,
+                    "endLine": 204,
+                    "endColumn": 12,
+                    "endOffset": 15061
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 205,
+                    "startColumn": 4,
+                    "startOffset": 15066,
+                    "endLine": 206,
+                    "endColumn": 12,
+                    "endOffset": 15196
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 207,
+                    "startColumn": 4,
+                    "startOffset": 15201,
+                    "endLine": 208,
+                    "endColumn": 12,
+                    "endOffset": 15315
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 209,
+                    "startColumn": 4,
+                    "startOffset": 15320,
+                    "endLine": 212,
+                    "endColumn": 12,
+                    "endOffset": 15516
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 213,
+                    "startColumn": 4,
+                    "startOffset": 15521,
+                    "endLine": 214,
+                    "endColumn": 12,
+                    "endOffset": 15635
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 215,
+                    "startColumn": 4,
+                    "startOffset": 15640,
+                    "endColumn": 92,
+                    "endOffset": 15728
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 216,
+                    "startColumn": 4,
+                    "startOffset": 15733,
+                    "endColumn": 110,
+                    "endOffset": 15839
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 217,
+                    "startColumn": 4,
+                    "startOffset": 15844,
+                    "endColumn": 55,
+                    "endOffset": 15895
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 218,
+                    "startColumn": 4,
+                    "startOffset": 15900,
+                    "endLine": 219,
+                    "endColumn": 12,
+                    "endOffset": 16002
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 220,
+                    "startColumn": 4,
+                    "startOffset": 16007,
+                    "endLine": 223,
+                    "endColumn": 12,
+                    "endOffset": 16197
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 224,
+                    "startColumn": 4,
+                    "startOffset": 16202,
+                    "endLine": 225,
+                    "endColumn": 12,
+                    "endOffset": 16308
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 226,
+                    "startColumn": 4,
+                    "startOffset": 16313,
+                    "endLine": 227,
+                    "endColumn": 12,
+                    "endOffset": 16441
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 228,
+                    "startColumn": 4,
+                    "startOffset": 16446,
+                    "endColumn": 94,
+                    "endOffset": 16536
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 229,
+                    "startColumn": 4,
+                    "startOffset": 16541,
+                    "endColumn": 90,
+                    "endOffset": 16627
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 230,
+                    "startColumn": 4,
+                    "startOffset": 16632,
+                    "endColumn": 90,
+                    "endOffset": 16718
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 231,
+                    "startColumn": 4,
+                    "startOffset": 16723,
+                    "endColumn": 116,
+                    "endOffset": 16835
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 232,
+                    "startColumn": 4,
+                    "startOffset": 16840,
+                    "endLine": 233,
+                    "endColumn": 12,
+                    "endOffset": 16974
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 234,
+                    "startColumn": 4,
+                    "startOffset": 16979,
+                    "endColumn": 96,
+                    "endOffset": 17071
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/50f596f1cab3bf814015c1b3f31c3f23adce3bca/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 235,
+                    "startColumn": 4,
+                    "startOffset": 17076,
+                    "endColumn": 70,
+                    "endOffset": 17142
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 236,
+                    "startColumn": 4,
+                    "startOffset": 17147,
+                    "endColumn": 82,
+                    "endOffset": 17225
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 237,
+                    "startColumn": 4,
+                    "startOffset": 17230,
+                    "endLine": 246,
+                    "endColumn": 12,
+                    "endOffset": 17848
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 247,
+                    "startColumn": 4,
+                    "startOffset": 17853,
+                    "endColumn": 56,
+                    "endOffset": 17905
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 248,
+                    "startColumn": 4,
+                    "startOffset": 17910,
+                    "endColumn": 57,
+                    "endOffset": 17963
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 249,
+                    "startColumn": 4,
+                    "startOffset": 17968,
+                    "endLine": 260,
+                    "endColumn": 12,
+                    "endOffset": 18587
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 261,
+                    "startColumn": 4,
+                    "startOffset": 18592,
+                    "endLine": 272,
+                    "endColumn": 12,
+                    "endOffset": 19223
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 273,
+                    "startColumn": 4,
+                    "startOffset": 19228,
+                    "endColumn": 118,
+                    "endOffset": 19342
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 274,
+                    "startColumn": 4,
+                    "startOffset": 19347,
+                    "endColumn": 128,
+                    "endOffset": 19471
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 275,
+                    "startColumn": 4,
+                    "startOffset": 19476,
+                    "endLine": 277,
+                    "endColumn": 12,
+                    "endOffset": 19642
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 278,
+                    "startColumn": 4,
+                    "startOffset": 19647,
+                    "endLine": 280,
+                    "endColumn": 12,
+                    "endOffset": 19808
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 281,
+                    "startColumn": 4,
+                    "startOffset": 19813,
+                    "endColumn": 128,
+                    "endOffset": 19937
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 282,
+                    "startColumn": 4,
+                    "startOffset": 19942,
+                    "endLine": 284,
+                    "endColumn": 12,
+                    "endOffset": 20108
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 285,
+                    "startColumn": 4,
+                    "startOffset": 20113,
+                    "endColumn": 130,
+                    "endOffset": 20239
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 286,
+                    "startColumn": 4,
+                    "startOffset": 20244,
+                    "endLine": 288,
+                    "endColumn": 12,
+                    "endOffset": 20409
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 289,
+                    "startColumn": 4,
+                    "startOffset": 20414,
+                    "endColumn": 115,
+                    "endOffset": 20525
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/e777b916a326506d50ed679174b8a1b5ecbe409f/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 290,
+                    "startColumn": 4,
+                    "startOffset": 20530,
+                    "endColumn": 125,
+                    "endOffset": 20651
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/e777b916a326506d50ed679174b8a1b5ecbe409f/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 291,
+                    "startColumn": 4,
+                    "startOffset": 20656,
+                    "endLine": 293,
+                    "endColumn": 12,
+                    "endOffset": 20819
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/34384d4501feb4aadf5c47b3da06bc85b263f369/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 294,
+                    "startColumn": 4,
+                    "startOffset": 20824,
+                    "endLine": 296,
+                    "endColumn": 12,
+                    "endOffset": 20982
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/34384d4501feb4aadf5c47b3da06bc85b263f369/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 297,
+                    "startColumn": 4,
+                    "startOffset": 20987,
+                    "endColumn": 125,
+                    "endOffset": 21108
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/e777b916a326506d50ed679174b8a1b5ecbe409f/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 298,
+                    "startColumn": 4,
+                    "startOffset": 21113,
+                    "endLine": 300,
+                    "endColumn": 12,
+                    "endOffset": 21276
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/34384d4501feb4aadf5c47b3da06bc85b263f369/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 301,
+                    "startColumn": 4,
+                    "startOffset": 21281,
+                    "endColumn": 127,
+                    "endOffset": 21404
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/e777b916a326506d50ed679174b8a1b5ecbe409f/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 302,
+                    "startColumn": 4,
+                    "startOffset": 21409,
+                    "endLine": 304,
+                    "endColumn": 12,
+                    "endOffset": 21571
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/34384d4501feb4aadf5c47b3da06bc85b263f369/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 305,
+                    "startColumn": 4,
+                    "startOffset": 21576,
+                    "endLine": 306,
+                    "endColumn": 8,
+                    "endOffset": 21701
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/5d0dbbcd00b2526eb0747cc43b0a5c68ea7f318b/output/res/values-v21/values.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 307,
+                    "startColumn": 4,
+                    "startOffset": 21706,
+                    "endLine": 309,
+                    "endColumn": 12,
+                    "endOffset": 21873
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/e777b916a326506d50ed679174b8a1b5ecbe409f/output/res/values-v21/values-v21.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 310,
+                    "startColumn": 4,
+                    "startOffset": 21878,
+                    "endLine": 314,
+                    "endColumn": 12,
+                    "endOffset": 22211
+                },
+                "from": {
+                    "file": "/Users/lobemusonda/.android/build-cache/e777b916a326506d50ed679174b8a1b5ecbe409f/output/res/values-v21/values-v21.xml"
+                }
+            }
+        ]
+    }
+]

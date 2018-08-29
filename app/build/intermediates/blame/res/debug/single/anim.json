@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/50f596f1cab3bf814015c1b3f31c3f23adce3bca/output/res/anim/design_snackbar_out.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/50f596f1cab3bf814015c1b3f31c3f23adce3bca/output/res/anim/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/anim/tooltip_enter.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/anim/tooltip_enter.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/50f596f1cab3bf814015c1b3f31c3f23adce3bca/output/res/anim/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/anim/tooltip_exit.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/anim/tooltip_exit.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/50f596f1cab3bf814015c1b3f31c3f23adce3bca/output/res/anim/design_snackbar_in.xml"
+    }
+]

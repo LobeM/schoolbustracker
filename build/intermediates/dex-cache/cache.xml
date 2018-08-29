@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="bea370dfc03fd9389e6dcb41aa84d74d95f303ec">
+        <dex dex="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ef3342a9ef5c861521f05516b2fba017b632aa25/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.3"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e654dd580c5cf39c181a0f163911f75de997eb18/classes.dex" />
+    </item>
+
+</items>

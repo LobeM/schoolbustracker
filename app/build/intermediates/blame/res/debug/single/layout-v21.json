@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/layout-v21/place_autocomplete_fragment.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/868af7e6601083791c73c9159a71fbf4f7942099/output/res/layout-v21/place_autocomplete_fragment.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/e777b916a326506d50ed679174b8a1b5ecbe409f/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/e777b916a326506d50ed679174b8a1b5ecbe409f/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/e777b916a326506d50ed679174b8a1b5ecbe409f/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/e777b916a326506d50ed679174b8a1b5ecbe409f/output/res/layout-v21/notification_action.xml"
+    }
+]

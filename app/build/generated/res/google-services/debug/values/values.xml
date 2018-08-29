@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">320871669538-rav8b3ago2r8k4ijs132m44rlib428j7.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://school-bus-tracker-5105d.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">320871669538</string>
+    <string name="google_api_key" translatable="false">AIzaSyBn_Yo80SZm_a1oUiZzN2WMQ8pnBiTa-ME</string>
+    <string name="google_app_id" translatable="false">1:320871669538:android:47129364f3fdc37f</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBn_Yo80SZm_a1oUiZzN2WMQ8pnBiTa-ME</string>
+    <string name="google_storage_bucket" translatable="false">school-bus-tracker-5105d.appspot.com</string>
+    <string name="project_id" translatable="false">school-bus-tracker-5105d</string>
+</resources>

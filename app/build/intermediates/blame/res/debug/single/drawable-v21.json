@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-v21/avd_show_password.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/50f596f1cab3bf814015c1b3f31c3f23adce3bca/output/res/drawable-v21/avd_show_password.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-v21/design_password_eye.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/50f596f1cab3bf814015c1b3f31c3f23adce3bca/output/res/drawable-v21/design_password_eye.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/e777b916a326506d50ed679174b8a1b5ecbe409f/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-v21/avd_hide_password.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/50f596f1cab3bf814015c1b3f31c3f23adce3bca/output/res/drawable-v21/avd_hide_password.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-v21/design_bottom_navigation_item_background.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/50f596f1cab3bf814015c1b3f31c3f23adce3bca/output/res/drawable-v21/design_bottom_navigation_item_background.xml"
+    }
+]

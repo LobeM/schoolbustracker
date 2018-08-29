@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_disabled.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/8479fe63b776e4f29e3d12873754f90d806c08f4/output/res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/8479fe63b776e4f29e3d12873754f90d806c08f4/output/res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/8479fe63b776e4f29e3d12873754f90d806c08f4/output/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
+    }
+]

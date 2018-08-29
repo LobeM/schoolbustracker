@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher.png",
+        "source": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/mipmap-mdpi/ic_launcher_round.png",
+        "source": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    }
+]
