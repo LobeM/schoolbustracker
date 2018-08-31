@@ -1,19 +1,19 @@
 [
     {
-        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
-        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/color/abc_hint_foreground_material_dark.xml"
-    },
-    {
         "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
         "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/color/abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/color/abc_hint_foreground_material_dark.xml"
     },
     {
         "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/color/abc_tint_switch_thumb.xml",
         "source": "/Users/lobemusonda/.android/build-cache/313185a7b7456ebf3354679ef2147da75abbf7bf/output/res/color/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
         "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/color/wallet_secondary_text_holo_dark.xml",

@@ -10,24 +10,37 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private static final String TAG = "HomeActivity";
+    private FirebaseAuth mAuth;
 
     private DrawerLayout mDrawerLayout;
+    private TextView mTextViewDisplayName, mTextViewEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        mAuth = FirebaseAuth.getInstance();
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.home_drawer);
-        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
+        mDrawerLayout = findViewById(R.id.home_drawer);
+        NavigationView navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        View headerView = navigationView.getHeaderView(0);
+        mTextViewDisplayName = headerView.findViewById(R.id.textViewDisplayName);
+        mTextViewEmail = headerView.findViewById(R.id.textViewEmail);
+        loadUserInformation();
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -38,6 +51,17 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (mAuth.getCurrentUser() == null) {
+            Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
         }
     }
 
@@ -60,7 +84,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         new ChangePasswordFragment()).commit();
                 break;
             case R.id.nav_logout:
+                FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 break;
             default:
@@ -79,6 +106,18 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             mDrawerLayout.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+        }
+    }
+
+    private void loadUserInformation() {
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user != null) {
+            if (user.getDisplayName() != null) {
+                mTextViewDisplayName.setText(user.getDisplayName());
+            }
+            if (user.getEmail() != null) {
+                mTextViewEmail.setText(user.getEmail());
+            }
         }
     }
 }

@@ -14,15 +14,17 @@
         android:src="@mipmap/ic_launcher_round" />
 
     <TextView
+        android:id="@+id/textViewDisplayName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
-        android:text="Lobe Musonda"
+        android:text="User"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
+        android:id="@+id/textViewEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="lobemusonda@parent.com" />
+        android:text="email@email.com" />
 
 </LinearLayout>

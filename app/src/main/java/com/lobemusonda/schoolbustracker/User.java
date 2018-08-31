@@ -5,10 +5,10 @@ package com.lobemusonda.schoolbustracker;
  */
 
 public class User {
-    public String name, email;
+    public String name, email, type;
 
     public User () {
-
+        type = "parent";
     }
 
     public User(String name, String email) {
