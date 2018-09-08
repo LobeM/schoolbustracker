@@ -60,6 +60,7 @@
             android:name="com.lobemusonda.schoolbustracker.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.lobemusonda.schoolbustracker.MapActivity" />
+        <activity android:name="com.lobemusonda.schoolbustracker.AddChildActivity" />
 
         <meta-data
             android:name="android.support.VERSION"

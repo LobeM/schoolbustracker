@@ -3,9 +3,15 @@
     <string name="welcome_txt">Welcome to School Bus Tracker</string>
     <string name="login">Login</string>
     <string name="sign_up">Sign up</string>
+    <string name="add_child">Add child</string>
     <string name="full_name">full name</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
     <string name="email_txt">email</string>
     <string name="password_txt">password</string>
+    <string name="bus_no_title">Bus number:</string>
+    <string name="bus_no">Searching…</string>
+    <string name="no_bus_av">No bus available</string>
     <string name="title_activity_home">HomeActivity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>

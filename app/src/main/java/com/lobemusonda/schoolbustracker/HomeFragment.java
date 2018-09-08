@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -41,6 +42,15 @@ public class HomeFragment extends Fragment {
         mChildItems.add(new ChildItem("Elizabeth Mulindwa", "ABH 3907", -15.388111, 28.325354));
         mChildItems.add(new ChildItem("Sibeso Mukelebai", "BAB 2015", -15.4207532, 28.2870607));
         mChildItems.add(new ChildItem("Nyanzigi Ramadani", "ABA 6969", -15.384593, 28.3153254));
+
+        FloatingActionButton fabAddChild = view.findViewById(R.id.fabAddChild);
+        fabAddChild.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), AddChildActivity.class);
+                startActivity(intent);
+            }
+        });
 
         mRecyclerView = view.findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);

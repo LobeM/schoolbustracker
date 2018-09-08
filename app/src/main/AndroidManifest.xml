@@ -32,14 +32,15 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SignUpActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".HomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MapActivity" />
+        <activity android:name=".AddChildActivity"></activity>
     </application>
 
 </manifest>

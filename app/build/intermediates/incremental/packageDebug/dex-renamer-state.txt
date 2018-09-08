@@ -1,4 +1,4 @@
-#Thu Aug 30 11:28:22 CAT 2018
+#Sat Sep 08 14:57:07 CAT 2018
 base.0=/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ef3342a9ef5c861521f05516b2fba017b632aa25
 renamed.1=classes2.dex
 renamed.0=classes.dex
