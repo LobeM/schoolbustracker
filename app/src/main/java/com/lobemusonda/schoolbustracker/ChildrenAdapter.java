@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 
 public class ChildrenAdapter extends RecyclerView.Adapter<ChildrenAdapter.ChildrenViewHolder>{
-    private ArrayList<ChildItem> mChildItems;
+    private ArrayList<Child> mChild;
     private OnItemClickListener mListener;
 
     public void setOnItemClickListener(OnItemClickListener listener) {
@@ -50,8 +50,8 @@ public class ChildrenAdapter extends RecyclerView.Adapter<ChildrenAdapter.Childr
         }
     }
 
-    public ChildrenAdapter(ArrayList<ChildItem> childItems) {
-        mChildItems = childItems;
+    public ChildrenAdapter(ArrayList<Child> childItems) {
+        mChild = childItems;
     }
 
     @Override
@@ -63,14 +63,14 @@ public class ChildrenAdapter extends RecyclerView.Adapter<ChildrenAdapter.Childr
 
     @Override
     public void onBindViewHolder(ChildrenViewHolder holder, int position) {
-        ChildItem currentItem = mChildItems.get(position);
+        Child currentItem = mChild.get(position);
 
-        holder.mChildName.setText(currentItem.getmChildName());
-        holder.mBusNo.setText(currentItem.getmBusNo());
+        holder.mChildName.setText(currentItem.getFirstName() + " "+ currentItem.getLastName());
+        holder.mBusNo.setText(currentItem.getBusNo());
     }
 
     @Override
     public int getItemCount() {
-        return mChildItems.size();
+        return mChild.size();
     }
 }

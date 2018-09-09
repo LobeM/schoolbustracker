@@ -16,6 +16,12 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -27,21 +33,22 @@ public class HomeFragment extends Fragment {
     private static final String TAG = "HomeFragment";
     private static final int ERROR_DIALOG_REQUEST = 9001;
 
+    private FirebaseAuth mAuth;
+    private DatabaseReference mDatabaseChildren;
+
     private RecyclerView mRecyclerView;
     private ChildrenAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    private ArrayList<ChildItem> mChildItems;
+    private ArrayList<Child> mChild;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        mChildItems = new ArrayList<>();
-        mChildItems.add(new ChildItem("Keziah Chakaba", "ABH 3907", -15.3971622, 28.3057016));
-        mChildItems.add(new ChildItem("Elizabeth Mulindwa", "ABH 3907", -15.388111, 28.325354));
-        mChildItems.add(new ChildItem("Sibeso Mukelebai", "BAB 2015", -15.4207532, 28.2870607));
-        mChildItems.add(new ChildItem("Nyanzigi Ramadani", "ABA 6969", -15.384593, 28.3153254));
+        mAuth = FirebaseAuth.getInstance();
+        mDatabaseChildren = FirebaseDatabase.getInstance().getReference("children").child(mAuth.getCurrentUser().getUid());
+        mChild = new ArrayList<>();
 
         FloatingActionButton fabAddChild = view.findViewById(R.id.fabAddChild);
         fabAddChild.setOnClickListener(new View.OnClickListener() {
@@ -55,27 +62,45 @@ public class HomeFragment extends Fragment {
         mRecyclerView = view.findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
-        mAdapter = new ChildrenAdapter(mChildItems);
-
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.setAdapter(mAdapter);
-
-        if (isServicesOk()) {
-            mAdapter.setOnItemClickListener(new ChildrenAdapter.OnItemClickListener() {
-                @Override
-                public void onItemClick(int position) {
-                    //mChildItems.get(position).setmBusNo("Clicked");
-                    //mAdapter.notifyItemChanged(position);
-                    Intent intent = new Intent(getContext(), MapActivity.class);
-                    intent.putExtra(MapActivity.EXTRA_POSITION, position);
-                    startActivity(intent);
-                }
-            });
-        }
 
         return view;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        mDatabaseChildren.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                mChild.clear();
+                for (DataSnapshot childSnapshot: dataSnapshot.getChildren()) {
+                    Child child = childSnapshot.getValue(Child.class);
+                    mChild.add(child);
+                }
+                mAdapter = new ChildrenAdapter(mChild);
+
+                mRecyclerView.setLayoutManager(mLayoutManager);
+                mRecyclerView.setAdapter(mAdapter);
+
+                if (isServicesOk()) {
+                    mAdapter.setOnItemClickListener(new ChildrenAdapter.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(int position) {
+                            Intent intent = new Intent(getContext(), MapActivity.class);
+                            intent.putExtra(MapActivity.EXTRA_POSITION, position);
+                            startActivity(intent);
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
 
     public boolean isServicesOk() {
         Log.d(TAG, "isServicesOk: checking google services version");
