@@ -25,4 +25,11 @@
             android:src="@drawable/ic_action_add"/>
     </android.support.design.widget.CoordinatorLayout>
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>

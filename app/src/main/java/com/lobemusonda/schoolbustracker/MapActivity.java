@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -23,6 +25,12 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -34,26 +42,108 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private static final String FINE_LOCATION = Manifest.permission.ACCESS_FINE_LOCATION;
     private static final String COARSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
 
+    private FirebaseAuth mAuth;
+    private DatabaseReference mDatabaseChildren;
+    private DatabaseReference mDatabaseDrivers;
+
+    private Button mButtonTrack;
+    
     private boolean mLocationPermissionGranted = false;
     private GoogleMap mMap;
     private FusedLocationProviderClient mFusedLocationProviderClient;
-    private ArrayList<ChildItem> mChildItems;
+    private ArrayList<Child> mChildList;
+    private ArrayList<Driver> mDriverList;
+    private Driver mCurrentDriver;
     private int mChildPosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+
+        mAuth = FirebaseAuth.getInstance();
+        mDatabaseChildren = FirebaseDatabase.getInstance().getReference("children").child(mAuth.getCurrentUser().getUid());
+        mDatabaseDrivers = FirebaseDatabase.getInstance().getReference("users");
+
         Intent intent = getIntent();
         mChildPosition = intent.getIntExtra(EXTRA_POSITION, 0);
+        
+        mButtonTrack = findViewById(R.id.buttonTrackDriver);
 
-        mChildItems = new ArrayList<>();
-        mChildItems.add(new ChildItem("Keziah Chakaba", "ABH 3907", -15.3971622, 28.3057016));
-        mChildItems.add(new ChildItem("Elizabeth Mulindwa", "ABH 3907", -15.388111, 28.325354));
-        mChildItems.add(new ChildItem("Sibeso Mukelebai", "BAB 2015", -15.4207532, 28.2870607));
-        mChildItems.add(new ChildItem("Nyanzigi Ramadani", "ABA 6969", -15.384593, 28.3153254));
+        mChildList = new ArrayList<>();
+        mDriverList = new ArrayList<>();
 
-        getLocationPermission();
+        getChild();
+
+        mButtonTrack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mCurrentDriver.getStatus().equals("online")) {
+                    MarkerOptions options = new MarkerOptions()
+                            .position(new LatLng(mCurrentDriver.getLatitude(), mCurrentDriver.getLongitude()));
+                    mMap.addMarker(options);
+                    getDriverLocation();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Driver is offline", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+    }
+
+
+    private void getDriver(final Child currentChild) {
+        Log.d(TAG, "getDriver: called");
+        mDriverList.clear();
+        mDatabaseDrivers.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot driverSnapshot : dataSnapshot.getChildren()) {
+                    Log.d(TAG, "onDataChange: snapshot =" + driverSnapshot.getValue());
+                    String value = driverSnapshot.child("type").getValue(String.class);
+                    if (value.equals("driver")) {
+                        Log.d(TAG, "onDataChange: Driver found");
+                        mDriverList.add(driverSnapshot.getValue(Driver.class));
+                    }
+                }
+                for (Driver driver : mDriverList) {
+                    Log.d(TAG, "onDataChange: bus no "+driver.getBusNo());
+                    if (driver.getBusNo().equals(currentChild.getBusNo())) {
+                        mCurrentDriver = driver;
+                        Log.d(TAG, "onDataChange: current driver saved");
+                        getLocationPermission();
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(getApplicationContext(), databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void getChild() {
+        Log.d(TAG, "getChild: called");
+        mChildList.clear();
+        mDatabaseChildren.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                mChildList.clear();
+                for (DataSnapshot childSnapshot : dataSnapshot.getChildren()) {
+                    Child child = childSnapshot.getValue(Child.class);
+                    mChildList.add(child);
+                }
+                final Child currentChild = mChildList.get(mChildPosition);
+                Log.d(TAG, "onDataChange: child = " + currentChild.getFirstName());
+                getDriver(currentChild);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(getApplicationContext(), databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -64,20 +154,20 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
         if (mLocationPermissionGranted) {
             getDeviceLocation();
-//            getChildLocation();
+            //getDriverLocation();
 
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                    != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
+            if (ActivityCompat.checkSelfPermission(MapActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
+                    != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(MapActivity.this,
                     Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 return;
             }
             mMap.setMyLocationEnabled(true);
-//            mMap.getUiSettings().setMyLocationButtonEnabled(false);
         }
+
     }
 
-    private void getChildLocation() {
-        Log.d(TAG, "getChildLocation: getting the childs' location");
+    private void getDriverLocation() {
+        Log.d(TAG, "getDriverLocation: called");
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
         try {
@@ -87,12 +177,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                     @Override
                     public void onComplete(@NonNull Task task) {
                         if (task.isSuccessful()) {
-                            Log.d(TAG, "onComplete: found location!");
-                            ChildItem currentChild = mChildItems.get(mChildPosition);
-                            moveCamera(new LatLng(currentChild.getmLatitude(), currentChild.getmLongitude()),
+                            moveCamera(new LatLng(mCurrentDriver.getLatitude(), mCurrentDriver.getLongitude()),
                                     DEFAULT_ZOOM);
                         } else {
-                            Log.d(TAG, "onComplete: childs location is null");
                             Toast.makeText(MapActivity.this, "Unable to find childs location", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -134,12 +221,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private void moveCamera(LatLng latLng, float zoom) {
         Log.d(TAG, "moveCamera: moving the camera to lat: " + latLng.latitude + ", long: " + latLng.longitude);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
-
-        ChildItem currentChild = mChildItems.get(mChildPosition);
-        MarkerOptions options = new MarkerOptions()
-                .position(new LatLng(currentChild.getmLatitude(), currentChild.getmLongitude()))
-                .title(currentChild.getmChildName());
-        mMap.addMarker(options);
     }
 
     private void initMap() {

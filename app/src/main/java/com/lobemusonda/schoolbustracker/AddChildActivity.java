@@ -107,7 +107,6 @@ public class AddChildActivity extends AppCompatActivity {
         mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Log.d(TAG, "onDataChange: called");
                 for (DataSnapshot driverSnapshot : dataSnapshot.getChildren()) {
                     if (driverSnapshot.child("type").getValue().equals("driver")) {
                         mBusList.add(driverSnapshot.child("busNo").getValue(String.class));
@@ -123,7 +122,7 @@ public class AddChildActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
+                Toast.makeText(AddChildActivity.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

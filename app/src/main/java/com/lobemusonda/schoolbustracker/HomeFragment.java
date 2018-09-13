@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -36,6 +37,7 @@ public class HomeFragment extends Fragment {
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabaseChildren;
 
+    private ProgressBar mProgressBar;
     private RecyclerView mRecyclerView;
     private ChildrenAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -59,6 +61,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        mProgressBar = view.findViewById(R.id.progressBar);
         mRecyclerView = view.findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
@@ -69,7 +72,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-
+        mProgressBar.setVisibility(View.VISIBLE);
         mDatabaseChildren.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -82,6 +85,7 @@ public class HomeFragment extends Fragment {
 
                 mRecyclerView.setLayoutManager(mLayoutManager);
                 mRecyclerView.setAdapter(mAdapter);
+                mProgressBar.setVisibility(View.GONE);
 
                 if (isServicesOk()) {
                     mAdapter.setOnItemClickListener(new ChildrenAdapter.OnItemClickListener() {
