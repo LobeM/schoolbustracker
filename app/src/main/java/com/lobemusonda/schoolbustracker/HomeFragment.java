@@ -92,7 +92,8 @@ public class HomeFragment extends Fragment {
                         @Override
                         public void onItemClick(int position) {
                             Intent intent = new Intent(getContext(), MapActivity.class);
-                            intent.putExtra(MapActivity.EXTRA_POSITION, position);
+                            intent.putExtra(MapActivity.EXTRA_ID, mChild.get(position).getChildId());
+                            intent.putExtra(MapActivity.EXTRA_DRIVER, mChild.get(position).getDriverID());
                             startActivity(intent);
                         }
                     });

@@ -11,12 +11,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -35,7 +32,9 @@ public class AddChildActivity extends AppCompatActivity {
     private EditText mEditTextFirstName, mEditTextLastName;
     private Button mButtonAddChild;
     private ProgressBar mProgressBar;
-    private List<String> mBusList;
+    private List<String> mDriverList;
+    private String mDriverId;
+    private String mBusNo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,12 +52,39 @@ public class AddChildActivity extends AppCompatActivity {
         mEditTextLastName = findViewById(R.id.editTextLastName);
         mProgressBar = findViewById(R.id.progressBar);
 
-        mBusList = new ArrayList<>();
+        mDriverList = new ArrayList<>();
+
+        getDriver();
 
         mButtonAddChild.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 saveChild();
+            }
+        });
+    }
+
+    private void getDriver() {
+        mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot driverSnapshot : dataSnapshot.getChildren()) {
+                    if (driverSnapshot.child("type").getValue().equals("driver")) {
+                        mDriverList.add(driverSnapshot.getKey());
+                    }
+                }
+                if (!mDriverList.isEmpty()) {
+                    mDriverId = mDriverList.get(0);
+                    getBusNo(mDriverId);
+                } else {
+                    mTextViewLabel.setVisibility(View.GONE);
+                    mTextViewBusNo.setText(R.string.no_bus_av);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(AddChildActivity.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -78,6 +104,10 @@ public class AddChildActivity extends AppCompatActivity {
             mEditTextLastName.requestFocus();
             return;
         }
+        if (busNo.isEmpty()) {
+            Toast.makeText(this, R.string.no_bus_av, Toast.LENGTH_SHORT).show();
+            return;
+        }
         if (busNo.equals(R.string.no_bus_av)) {
             Toast.makeText(this, R.string.no_bus_av, Toast.LENGTH_SHORT).show();
             return;
@@ -85,7 +115,7 @@ public class AddChildActivity extends AppCompatActivity {
 
         mProgressBar.setVisibility(View.VISIBLE);
         String id = mDatabaseChildren.push().getKey();
-        Child child = new Child(id, firstName, lastName, busNo);
+        Child child = new Child(id, firstName, lastName, mDriverId);
         mDatabaseChildren.child(id).setValue(child).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
@@ -100,29 +130,18 @@ public class AddChildActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+    private void getBusNo(String driverId) {
+        mDatabaseReference.child(driverId).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot driverSnapshot : dataSnapshot.getChildren()) {
-                    if (driverSnapshot.child("type").getValue().equals("driver")) {
-                        mBusList.add(driverSnapshot.child("busNo").getValue(String.class));
-                    }
-                }
-                if (!mBusList.isEmpty()) {
-                    mTextViewBusNo.setText(mBusList.get(0));
-                } else {
-                    mTextViewLabel.setVisibility(View.GONE);
-                    mTextViewBusNo.setText(R.string.no_bus_av);
-                }
+                mBusNo = dataSnapshot.child("busNo").getValue(String.class);
+
+                mTextViewBusNo.setText(mBusNo);
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(AddChildActivity.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+
             }
         });
     }
