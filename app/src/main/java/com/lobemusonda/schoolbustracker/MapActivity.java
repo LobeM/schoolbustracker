@@ -60,12 +60,10 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private FusedLocationProviderClient mFusedLocationProviderClient;
     private Marker mDriverLocationMarker;
-//    private ArrayList<Driver> mDriverList;
-//    private Driver mCurrentDriver;
+    private LatLng mDriverlatLng;
 
     private String mChildId;
     private String mDriverID;
-    private boolean mDriverStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,27 +80,20 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         mDatabaseDriver = FirebaseDatabase.getInstance().getReference("users").child(mDriverID);
 
         mButtonTrack = findViewById(R.id.buttonTrackDriver);
-
-//        mDriverList = new ArrayList<>();
+        mButtonTrack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mDriverLocationMarker != null) {
+                    moveCamera(mDriverlatLng, DEFAULT_ZOOM);
+                } else {
+                    Toast.makeText(MapActivity.this, "Driver is offline", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         getLocationPermission();
-//        getBusNo();
         getDriverDetails(mDatabaseDriver);
 
-//        mButtonTrack.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if (mCurrentDriver.getStatus().equals("online")) {
-//                    MarkerOptions options = new MarkerOptions()
-//                            .position(new LatLng(mCurrentDriver.getLatitude(), mCurrentDriver.getLongitude()));
-//                    mMap.addMarker(options);
-//                    getDriverLocation();
-//                } else {
-//                    Toast.makeText(getApplicationContext(), "Driver is offline", Toast.LENGTH_SHORT).show();
-//                }
-//
-//            }
-//        });
     }
 
     private void getDriverDetails(DatabaseReference databaseDriver) {
@@ -112,15 +103,12 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 String status = dataSnapshot.child("status").getValue(String.class);
                 double latitude = dataSnapshot.child("latitude").getValue(double.class);
                 double longitude = dataSnapshot.child("longitude").getValue(double.class);
-                LatLng latLng = new LatLng(latitude, longitude);
+                mDriverlatLng = new LatLng(latitude, longitude);
                 if (mDriverLocationMarker != null) {
                     mDriverLocationMarker.remove();
                 }
                 if (status.equals("online")) {
-                    mDriverStatus = true;
-                    pinDriverLocation(latLng);
-                } else {
-                    mDriverStatus = false;
+                    pinDriverLocation(mDriverlatLng);
                 }
             }
 
@@ -142,51 +130,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         mDriverLocationMarker = mMap.addMarker(markerOptions);
     }
 
-
-//    private void getBusNo() {
-//        mDatabaseChild.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                String busNo = dataSnapshot.child("busNo").getValue(String.class);
-//                getDriver(busNo);
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        });
-//    }
-
-//    private void getDriver(final String busNo) {
-//        Log.d(TAG, "getDriver: called");
-//        mDriverList.clear();
-//        mDatabaseDrivers.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                for (DataSnapshot driverSnapshot : dataSnapshot.getChildren()) {
-//                    String value = driverSnapshot.child("type").getValue(String.class);
-//                    if (value.equals("driver")) {
-//                        Log.d(TAG, "onDataChange: Driver found");
-//                        mDriverList.add(driverSnapshot.getValue(Driver.class));
-//                    }
-//                }
-//                for (Driver driver : mDriverList) {
-//                    if (driver.getBusNo().equals(busNo)) {
-//                        mCurrentDriver = driver;
-//                        Log.d(TAG, "onDataChange: current driver saved");
-//                        getLocationPermission();
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//                Toast.makeText(getApplicationContext(), databaseError.getMessage(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//    }
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
         Toast.makeText(this, "Map is ready", Toast.LENGTH_SHORT).show();
@@ -205,30 +148,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         }
 
     }
-
-//    private void getDriverLocation() {
-//        Log.d(TAG, "getDriverLocation: called");
-//        mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-//
-//        try {
-//            if (mLocationPermissionGranted) {
-//                Task location = mFusedLocationProviderClient.getLastLocation();
-//                location.addOnCompleteListener(new OnCompleteListener() {
-//                    @Override
-//                    public void onComplete(@NonNull Task task) {
-//                        if (task.isSuccessful()) {
-//                            moveCamera(new LatLng(mCurrentDriver.getLatitude(), mCurrentDriver.getLongitude()),
-//                                    DEFAULT_ZOOM);
-//                        } else {
-//                            Toast.makeText(MapActivity.this, "Unable to find childs location", Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                });
-//            }
-//        } catch (SecurityException e) {
-//            Log.e(TAG, "getDeviceLocation: SecurityException: " + e.getMessage());
-//        }
-//    }
 
     private void getDeviceLocation() {
         Log.d(TAG, "getDeviceLocation: getting the devices current location");

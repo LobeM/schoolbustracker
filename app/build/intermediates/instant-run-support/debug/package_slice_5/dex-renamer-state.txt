@@ -1,4 +1,4 @@
-#Wed Sep 19 12:11:33 CAT 2018
+#Thu Sep 20 11:09:02 CAT 2018
 base.0=/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5
 renamed.0=classes.dex
 file.0=/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex
