@@ -64,7 +64,7 @@ public class GetNearByPlaces extends AsyncTask<Object, String, String> {
 
         try {
             URL myurl = new URL(mURL);
-            //Log.d(TAG, "doInBackground: url = " + mURL);
+            Log.d(TAG, "doInBackground: url = " + mURL);
             HttpsURLConnection httpsURLConnection = (HttpsURLConnection)myurl.openConnection();
             httpsURLConnection.connect();
             is = httpsURLConnection.getInputStream();
@@ -88,6 +88,7 @@ public class GetNearByPlaces extends AsyncTask<Object, String, String> {
 
     @Override
     protected void onPostExecute(String s) {
+        Log.d(TAG, "onPostExecute: json = " + s);
         try {
             JSONObject parentObject = new JSONObject(s);
             JSONArray resultsArray = parentObject.getJSONArray("results");

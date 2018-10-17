@@ -6,6 +6,7 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -19,11 +20,18 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -35,7 +43,9 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ChangeRouteFragment extends Fragment implements OnMapReadyCallback {
+public class ChangeRouteFragment extends Fragment implements LocationListener,
+        GoogleApiClient.ConnectionCallbacks,
+        GoogleApiClient.OnConnectionFailedListener {
 
     private static final String TAG = "ChangeRouteFragment";
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
@@ -49,6 +59,8 @@ public class ChangeRouteFragment extends Fragment implements OnMapReadyCallback 
 
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabaseChildren;
+    private GoogleApiClient mClient;
+    private LocationRequest mLocationRequest;
 
     private ProgressBar mProgressBar;
     private Spinner mSpinnerChildren, mSpinnerPickUp, mSpinnerDropOff;
@@ -72,7 +84,8 @@ public class ChangeRouteFragment extends Fragment implements OnMapReadyCallback 
         mSpinnerPickUp = view.findViewById(R.id.spinnerPickUp);
         mSpinnerDropOff = view.findViewById(R.id.spinnerDropOff);
 
-        getLocationPermission();
+//        getLocationPermission();
+        buildGoogleApiClient();
 
         return view;
     }
@@ -117,18 +130,17 @@ public class ChangeRouteFragment extends Fragment implements OnMapReadyCallback 
             }
         });
 
-        if (mLocationPermissionGranted) {
-            //mMap = googleMap;
-            getDeviceLocation();
-        }
-        findBusStations();
+//        if (mLocationPermissionGranted) {
+//            //mMap = googleMap;
+//            getDeviceLocation();
+//        }
     }
 
-    public void findBusStations() {
+    public void findBusStations(LatLng currentLocation) {
         Log.d(TAG, "findBusStations: called");
         StringBuilder stringBuilder = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
-        stringBuilder.append("location="+"-15.3740549"+","+"28.2911655");
-        stringBuilder.append("&radius=" + 1000);
+        stringBuilder.append("location="+currentLocation.latitude+","+currentLocation.longitude);
+        stringBuilder.append("&radius=" + 5000);
         stringBuilder.append("&type="+"bus_station");
         stringBuilder.append("&key="+getResources().getString(R.string.API_key));
 
@@ -144,86 +156,144 @@ public class ChangeRouteFragment extends Fragment implements OnMapReadyCallback 
         getNearByPlaces.execute(dataTransfer);
     }
 
+    protected synchronized void buildGoogleApiClient() {
+        mClient = new GoogleApiClient.Builder(getContext())
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .build();
+        mClient.connect();
+    }
+
     @Override
-    public void onMapReady(GoogleMap googleMap) {
-        Log.d(TAG, "onMapReady: called");
-        if (mLocationPermissionGranted) {
-            mMap = googleMap;
-            getDeviceLocation();
-        }
-        findBusStations();
-    }
+    public void onLocationChanged(Location location) {
+        Log.d(TAG, "onLocationChanged: called");
+//        mLastLocation = location;
+//        if (mCurrentLocationMarker != null) {
+//            mCurrentLocationMarker.remove();
+//        }
 
-    private void getDeviceLocation() {
-        mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getContext());
+        LatLng currentLocation = new LatLng(location.getLatitude(), location.getLongitude());
+        findBusStations(currentLocation);
 
-        try {
-            if (mLocationPermissionGranted) {
-                Task location = mFusedLocationProviderClient.getLastLocation();
-                location.addOnCompleteListener(new OnCompleteListener() {
-                    @Override
-                    public void onComplete(@NonNull Task task) {
-                        if (task.isSuccessful()) {
-                            mCurrentLocation = (Location) task.getResult();
-                        } else {
-                            Toast.makeText(getContext(), "Unable to find current location", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-            }
-        } catch (SecurityException e) {
-            Log.e(TAG, "getDeviceLocation: SecurityException: " + e.getMessage());
-        }
+//        MarkerOptions markerOptions = new MarkerOptions();
+//        markerOptions.position(latLng);
+//        markerOptions.title("Location");
+//        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
+//
+//        mCurrentLocationMarker = mMap.addMarker(markerOptions);
+//
+//        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, DEFAULT_ZOOM));
 
-    }
-
-    private void getLocationPermission() {
-        Log.d(TAG, "getLocationPermission: getting location permissions");
-        String[] permissions = {
-                Manifest.permission.ACCESS_FINE_LOCATION,
-                Manifest.permission.ACCESS_COARSE_LOCATION
-        };
-
-        if (ContextCompat.checkSelfPermission(this.getContext(),
-                FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-            if (ContextCompat.checkSelfPermission(this.getContext(),
-                    COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                mLocationPermissionGranted = true;
-            } else {
-                ActivityCompat.requestPermissions(
-                        getActivity(),
-                        permissions,
-                        LOCATION_PERMISSION_REQUEST_CODE
-                );
-            }
-        } else {
-            ActivityCompat.requestPermissions(
-                    getActivity(),
-                    permissions,
-                    LOCATION_PERMISSION_REQUEST_CODE
-            );
+        if (mClient != null) {
+            LocationServices.FusedLocationApi.removeLocationUpdates(mClient, this);
         }
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        Log.d(TAG, "onRequestPermissionsResult: called");
-        mLocationPermissionGranted = false;
+    public void onConnected(@Nullable Bundle bundle) {
+        Log.d(TAG, "onConnected: called");
+        mLocationRequest = new LocationRequest();
 
-        switch (requestCode) {
-            case LOCATION_PERMISSION_REQUEST_CODE: {
-                if (grantResults.length > 0) {
-                    for (int i = 0; i < grantResults.length; i++) {
-                        if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
-                            mLocationPermissionGranted = false;
-                            return;
-                        }
-                    }
-                    Log.d(TAG, "onRequestPermissionsResult: permission granted");
-                    mLocationPermissionGranted = true;
+        mLocationRequest.setInterval(1000);
+        mLocationRequest.setFastestInterval(1000);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
 
-                }
-            }
+        if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            LocationServices.FusedLocationApi.requestLocationUpdates(mClient, mLocationRequest, this);
         }
     }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
+    }
+
+//    @Override
+//    public void onMapReady(GoogleMap googleMap) {
+//        Log.d(TAG, "onMapReady: called");
+//        if (mLocationPermissionGranted) {
+//            mMap = googleMap;
+//            getDeviceLocation();
+//        }
+//        findBusStations();
+//    }
+//
+//    private void getDeviceLocation() {
+//        mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getContext());
+//
+//        try {
+//            if (mLocationPermissionGranted) {
+//                Task location = mFusedLocationProviderClient.getLastLocation();
+//                location.addOnCompleteListener(new OnCompleteListener() {
+//                    @Override
+//                    public void onComplete(@NonNull Task task) {
+//                        if (task.isSuccessful()) {
+//                            mCurrentLocation = (Location) task.getResult();
+//                        } else {
+//                            Toast.makeText(getContext(), "Unable to find current location", Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                });
+//            }
+//        } catch (SecurityException e) {
+//            Log.e(TAG, "getDeviceLocation: SecurityException: " + e.getMessage());
+//        }
+//
+//    }
+//
+//    private void getLocationPermission() {
+//        Log.d(TAG, "getLocationPermission: getting location permissions");
+//        String[] permissions = {
+//                Manifest.permission.ACCESS_FINE_LOCATION,
+//                Manifest.permission.ACCESS_COARSE_LOCATION
+//        };
+//
+//        if (ContextCompat.checkSelfPermission(this.getContext(),
+//                FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+//            if (ContextCompat.checkSelfPermission(this.getContext(),
+//                    COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+//                mLocationPermissionGranted = true;
+//            } else {
+//                ActivityCompat.requestPermissions(
+//                        getActivity(),
+//                        permissions,
+//                        LOCATION_PERMISSION_REQUEST_CODE
+//                );
+//            }
+//        } else {
+//            ActivityCompat.requestPermissions(
+//                    getActivity(),
+//                    permissions,
+//                    LOCATION_PERMISSION_REQUEST_CODE
+//            );
+//        }
+//    }
+//
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+//        Log.d(TAG, "onRequestPermissionsResult: called");
+//        mLocationPermissionGranted = false;
+//
+//        switch (requestCode) {
+//            case LOCATION_PERMISSION_REQUEST_CODE: {
+//                if (grantResults.length > 0) {
+//                    for (int i = 0; i < grantResults.length; i++) {
+//                        if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
+//                            mLocationPermissionGranted = false;
+//                            return;
+//                        }
+//                    }
+//                    Log.d(TAG, "onRequestPermissionsResult: permission granted");
+//                    mLocationPermissionGranted = true;
+//
+//                }
+//            }
+//        }
+//    }
 }
