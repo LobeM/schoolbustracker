@@ -80,6 +80,10 @@
         "source": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/res/layout/child_item.xml"
     },
     {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/layout/fragment_change_route.xml",
+        "source": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/res/layout/fragment_change_route.xml"
+    },
+    {
         "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
         "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/layout/abc_action_bar_title_item.xml"
     },

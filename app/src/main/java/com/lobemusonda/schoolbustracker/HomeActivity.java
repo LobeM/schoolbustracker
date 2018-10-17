@@ -73,7 +73,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(this, "Request absence", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_change_route:
-                Toast.makeText(this, "Change route", Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new ChangeRouteFragment()).commit();
                 break;
             case R.id.nav_messages:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

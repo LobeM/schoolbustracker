@@ -22,6 +22,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -84,7 +85,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             @Override
             public void onClick(View view) {
                 if (mDriverLocationMarker != null) {
-                    moveCamera(mDriverlatLng, DEFAULT_ZOOM);
+                    CameraUpdate update = CameraUpdateFactory.newLatLngZoom(mDriverlatLng, DEFAULT_ZOOM);
+                    mMap.animateCamera(update);
                 } else {
                     Toast.makeText(MapActivity.this, "Driver is offline", Toast.LENGTH_SHORT).show();
                 }
