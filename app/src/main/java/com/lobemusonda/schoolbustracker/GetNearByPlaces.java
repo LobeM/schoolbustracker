@@ -42,8 +42,6 @@ public class GetNearByPlaces extends AsyncTask<Object, String, String> {
     private String data;
 
     private SpinAdapter mSpinAdapter;
-    private ArrayAdapter<String> mSpinnerArrayAdapter;
-    private ArrayList<String> mLocationNames;
     private ArrayList<BusStation> mStations;
 
     private Context mContext;
@@ -54,12 +52,10 @@ public class GetNearByPlaces extends AsyncTask<Object, String, String> {
 
     @Override
     protected String doInBackground(Object... objects) {
-        //mMap = (GoogleMap) objects[0];
         mURL = (String) objects[0];
         mSpinnerPickUp = (Spinner) objects[1];
         mSpinnerDropOff = (Spinner) objects[2];
 
-        mLocationNames = new ArrayList<>();
         mStations = new ArrayList<>();
 
         try {
@@ -93,8 +89,6 @@ public class GetNearByPlaces extends AsyncTask<Object, String, String> {
             JSONObject parentObject = new JSONObject(s);
             JSONArray resultsArray = parentObject.getJSONArray("results");
 
-            BusStation[] stations = new BusStation[50];
-
             for (int i = 0; i < resultsArray.length(); i++) {
                 JSONObject jsonObject = resultsArray.getJSONObject(i);
                 JSONObject locationObject = jsonObject.getJSONObject("geometry").getJSONObject("location");
@@ -111,13 +105,6 @@ public class GetNearByPlaces extends AsyncTask<Object, String, String> {
                 busStation.setLatitude(Double.parseDouble(latitude));
                 busStation.setLongitude(Double.parseDouble(longitude));
                 mStations.add(busStation);
-
-//                stations[i] = new BusStation();
-//                stations[i].setName(stationName);
-//                stations[i].setLatitude(Double.parseDouble(latitude));
-//                stations[i].setLongitude(Double.parseDouble(longitude));
-
-                //mLocationNames.add(stationName);
             }
 
 //            Initialize the adapter sending the current context
@@ -139,9 +126,6 @@ public class GetNearByPlaces extends AsyncTask<Object, String, String> {
 
                 }
             });
-//            mSpinnerArrayAdapter = new ArrayAdapter<>(mContext, R.layout.support_simple_spinner_dropdown_item, mLocationNames);
-//            mSpinnerPickUp.setAdapter(mSpinnerArrayAdapter);
-//            mSpinnerDropOff.setAdapter(mSpinnerArrayAdapter);
 
         } catch (JSONException e) {
             e.printStackTrace();
