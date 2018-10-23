@@ -154,19 +154,28 @@ public class ChangeRouteFragment extends Fragment implements LocationListener,
         }
 
         mProgressBar.setVisibility(View.VISIBLE);
-        mDatabaseLocation.child(driverID).child(childID).child("pickUp").setValue(pickUp)
+        ChildLocation childLocation = new ChildLocation(childID, pickUp, dropOff);
+        mDatabaseLocation.child(driverID).child(childID).setValue(childLocation)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
-                mDatabaseLocation.child(driverID).child(childID).child("dropOff").setValue(dropOff)
-                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        mProgressBar.setVisibility(View.GONE);
-                    }
-                });
+                mProgressBar.setVisibility(View.GONE);
             }
         });
+//        mDatabaseLocation.child(driverID).child(childID).child("pickUp").setValue(pickUp)
+//                .addOnSuccessListener(new OnSuccessListener<Void>() {
+//            @Override
+//            public void onSuccess(Void aVoid) {
+//                mDatabaseLocation.child(driverID).child(childID).child("dropOff").setValue(dropOff)
+//                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+//                    @Override
+//                    public void onSuccess(Void aVoid) {
+//                        mProgressBar.setVisibility(View.GONE);
+//                    }
+//                });
+//            }
+//        });
+
     }
 
     protected synchronized void buildGoogleApiClient() {

@@ -1,4 +1,4 @@
-#Mon Aug 27 11:57:25 CAT 2018
+#Tue Oct 23 12:01:28 CAT 2018
 file.71=/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_992a32089ef02274f1c08554b1513b86580ab28c/classes.dex
 file.70=/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_127db252bab1c9ea42249302f3d53986865ea662/classes.dex
 file.69=/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_144620591da87e5b6a8e06a7013e51b062512f45/classes.dex

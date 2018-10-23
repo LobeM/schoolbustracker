@@ -48,12 +48,12 @@
         "source": "/Users/lobemusonda/.android/build-cache/f21fe63c1cd10d3a04440faa3657adc0710b9a32/output/res/drawable-hdpi-v4/quantum_ic_art_track_grey600_48.png"
     },
     {
-        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/places_ic_search.png",
-        "source": "/Users/lobemusonda/.android/build-cache/868af7e6601083791c73c9159a71fbf4f7942099/output/res/drawable-hdpi-v4/places_ic_search.png"
-    },
-    {
         "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png",
         "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/places_ic_search.png",
+        "source": "/Users/lobemusonda/.android/build-cache/868af7e6601083791c73c9159a71fbf4f7942099/output/res/drawable-hdpi-v4/places_ic_search.png"
     },
     {
         "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/quantum_ic_pause_grey600_36.png",
@@ -68,12 +68,12 @@
         "source": "/Users/lobemusonda/.android/build-cache/f21fe63c1cd10d3a04440faa3657adc0710b9a32/output/res/drawable-hdpi-v4/quantum_ic_play_arrow_white_24.png"
     },
     {
-        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
-        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
         "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png",
+        "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/quantum_ic_play_circle_filled_grey600_36.png",
