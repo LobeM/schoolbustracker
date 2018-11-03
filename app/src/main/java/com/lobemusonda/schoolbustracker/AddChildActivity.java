@@ -3,12 +3,13 @@ package com.lobemusonda.schoolbustracker;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.TextView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -27,12 +28,13 @@ public class AddChildActivity extends AppCompatActivity {
     private static final String TAG = "AddChildActivity";
 
     private FirebaseAuth mAuth;
-    private DatabaseReference mDatabaseReference, mDatabaseChildren;
-    private TextView mTextViewBusNo, mTextViewLabel;
+    private DatabaseReference mDatabaseUsers, mDatabaseChildren;
+    private FirebaseDatabase mDatabase;
+    private Spinner mSpinnerSchools;
     private EditText mEditTextFirstName, mEditTextLastName;
     private Button mButtonAddChild;
     private ProgressBar mProgressBar;
-    private List<String> mDriverList;
+    private List<String> mDriverIdList, mSchoolList;
     private String mDriverId;
     private String mBusNo;
 
@@ -42,19 +44,21 @@ public class AddChildActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_child);
 
         mAuth = FirebaseAuth.getInstance();
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference("users");
+        mDatabase = FirebaseDatabase.getInstance();
+        mDatabaseUsers = FirebaseDatabase.getInstance().getReference("users");
         mDatabaseChildren = FirebaseDatabase.getInstance().getReference("children").child(mAuth.getCurrentUser().getUid());
 
         mButtonAddChild = findViewById(R.id.buttonAddChild);
-        mTextViewBusNo = findViewById(R.id.textViewBusNo);
-        mTextViewLabel = findViewById(R.id.textViewBusNoLabel);
+        mSpinnerSchools = findViewById(R.id.spinnerSchools);
         mEditTextFirstName = findViewById(R.id.editTextFirstName);
         mEditTextLastName = findViewById(R.id.editTextLastName);
         mProgressBar = findViewById(R.id.progressBar);
 
-        mDriverList = new ArrayList<>();
+        mDriverIdList = new ArrayList<>();
+        mSchoolList = new ArrayList<>();
 
-        getDriver();
+        //getDriver();
+        getSchools();
 
         mButtonAddChild.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,27 +68,38 @@ public class AddChildActivity extends AppCompatActivity {
         });
     }
 
-    private void getDriver() {
-        mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+    private void getSchools() {
+        mProgressBar.setVisibility(View.VISIBLE);
+        mDatabase.getReference("schools").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot driverSnapshot : dataSnapshot.getChildren()) {
-                    if (driverSnapshot.child("type").getValue().equals("driver")) {
-                        mDriverList.add(driverSnapshot.getKey());
-                    }
+                for (DataSnapshot schoolSnapshot: dataSnapshot.getChildren()) {
+                    mDriverIdList.add(schoolSnapshot.getKey());
+                    mSchoolList.add(schoolSnapshot.getValue(String.class));
                 }
-                if (!mDriverList.isEmpty()) {
-                    mDriverId = mDriverList.get(0);
-                    getBusNo(mDriverId);
-                } else {
-                    mTextViewLabel.setVisibility(View.GONE);
-                    mTextViewBusNo.setText(R.string.no_bus_av);
-                }
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, mSchoolList);
+                mSpinnerSchools.setAdapter(adapter);
+                getDriverIds();
+                mProgressBar.setVisibility(View.GONE);
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(AddChildActivity.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+    }
+
+    private void getDriverIds() {
+        mSpinnerSchools.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                mDriverId = mDriverIdList.get(i);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
             }
         });
     }
@@ -92,7 +107,7 @@ public class AddChildActivity extends AppCompatActivity {
     private void saveChild() {
         String firstName = mEditTextFirstName.getText().toString().trim();
         String lastName = mEditTextLastName.getText().toString().trim();
-        String busNo = mTextViewBusNo.getText().toString();
+//        String busNo = mTextViewBusNo.getText().toString();
 
         if (firstName.isEmpty()) {
             mEditTextFirstName.setError("First name is required");
@@ -104,11 +119,7 @@ public class AddChildActivity extends AppCompatActivity {
             mEditTextLastName.requestFocus();
             return;
         }
-        if (busNo.isEmpty()) {
-            Toast.makeText(this, R.string.no_bus_av, Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (busNo.equals(R.string.no_bus_av)) {
+        if (mDriverId.isEmpty()) {
             Toast.makeText(this, R.string.no_bus_av, Toast.LENGTH_SHORT).show();
             return;
         }
@@ -126,22 +137,6 @@ public class AddChildActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    private void getBusNo(String driverId) {
-        mDatabaseReference.child(driverId).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                mBusNo = dataSnapshot.child("busNo").getValue(String.class);
-
-                mTextViewBusNo.setText(mBusNo);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
             }
         });
     }

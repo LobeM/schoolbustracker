@@ -112,21 +112,6 @@ public class GetNearByPlaces extends AsyncTask<Object, String, String> {
             mSpinnerPickUp.setAdapter(mSpinAdapter);
             mSpinnerDropOff.setAdapter(mSpinAdapter);
 
-            mSpinnerPickUp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-//                    Here you get the current item that is selected by its position
-                    BusStation station = mSpinAdapter.getItem(i);
-//                    Here perform desired action
-                    Toast.makeText(mContext, "Station is located at" + station.getLatitude() + "," + station.getLongitude(), Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> adapterView) {
-
-                }
-            });
-
         } catch (JSONException e) {
             e.printStackTrace();
         }

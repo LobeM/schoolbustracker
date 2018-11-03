@@ -162,19 +162,6 @@ public class ChangeRouteFragment extends Fragment implements LocationListener,
                 mProgressBar.setVisibility(View.GONE);
             }
         });
-//        mDatabaseLocation.child(driverID).child(childID).child("pickUp").setValue(pickUp)
-//                .addOnSuccessListener(new OnSuccessListener<Void>() {
-//            @Override
-//            public void onSuccess(Void aVoid) {
-//                mDatabaseLocation.child(driverID).child(childID).child("dropOff").setValue(dropOff)
-//                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-//                    @Override
-//                    public void onSuccess(Void aVoid) {
-//                        mProgressBar.setVisibility(View.GONE);
-//                    }
-//                });
-//            }
-//        });
 
     }
 

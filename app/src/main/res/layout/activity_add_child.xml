@@ -27,31 +27,15 @@
             android:inputType="textPersonName"
             android:hint="@string/last_name"/>
 
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <TextView
-                android:id="@+id/textViewBusNoLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginRight="6dp"
-                android:textStyle="bold"
-                android:text="@string/bus_no_title"/>
-
-            <TextView
-                android:id="@+id/textViewBusNo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:textStyle="bold"
-                android:text="@string/bus_no"/>
-        </LinearLayout>
+            android:layout_marginTop="8dp"
+            android:text="@string/school"/>
+        <Spinner
+            android:id="@+id/spinnerSchools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <Button
             android:id="@+id/buttonAddChild"

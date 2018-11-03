@@ -26,4 +26,5 @@
     <string name="pick_up">Pick up</string>
     <string name="drop_off">Drop off</string>
     <string name="save">Save</string>
+    <string name="school">School:</string>
 </resources>
