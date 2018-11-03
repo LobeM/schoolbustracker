@@ -1092,6 +1092,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="absent">Absent</string>
     <string name="action_settings">Settings</string>
     <string name="add_child">Add child</string>
     <string name="app_name">School Bus Tracker</string>
@@ -1159,6 +1160,7 @@
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="default_web_client_id" translatable="false">320871669538-rav8b3ago2r8k4ijs132m44rlib428j7.apps.googleusercontent.com</string>
     <string name="drop_off">Drop off</string>
+    <string name="dropped">Dropped</string>
     <string name="email_txt">email</string>
     <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="firebase_database_url" translatable="false">https://school-bus-tracker-5105d.firebaseio.com</string>
@@ -1171,6 +1173,7 @@
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBn_Yo80SZm_a1oUiZzN2WMQ8pnBiTa-ME</string>
     <string name="google_maps_API_key">AIzaSyAtDZuZNwYtQrRc75IdA2TBaRVBBgkSo_U</string>
     <string name="google_storage_bucket" translatable="false">school-bus-tracker-5105d.appspot.com</string>
+    <string name="in_bus">In-Bus</string>
     <string name="last_name">Last name</string>
     <string name="login">Login</string>
     <string name="mr_button_content_description">Cast button</string>

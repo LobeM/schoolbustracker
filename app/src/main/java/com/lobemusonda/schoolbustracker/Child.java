@@ -5,17 +5,18 @@ package com.lobemusonda.schoolbustracker;
  */
 
 public class Child {
-    private String childId, firstName, lastName, driverID;
+    private String childId, firstName, lastName, driverID, status;
 
     public Child() {
 
     }
 
-    public Child(String childId, String firstName, String lastName, String driverID) {
+    public Child(String childId, String firstName, String lastName, String driverID, String status) {
         this.childId = childId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.driverID = driverID;
+        this.status = status;
     }
 
     public String getChildId() {
@@ -32,5 +33,9 @@ public class Child {
 
     public String getDriverID() {
         return driverID;
+    }
+
+    public String getStatus() {
+        return status;
     }
 }

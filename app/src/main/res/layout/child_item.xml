@@ -6,10 +6,18 @@
     app:cardCornerRadius="4dp"
     android:layout_margin="4dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:id="@+id/cardColorLabel"
+        android:layout_width="4dp"
         android:layout_height="match_parent"
-        android:layout_margin="4dp">
+        android:layout_marginRight="20dp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="4dp"
+        android:padding="4dp">
 
         <TextView
             android:id="@+id/card_name"
@@ -21,33 +29,34 @@
         <TextView
             android:id="@+id/card_bus_no"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/card_name"/>
+            android:layout_height="wrap_content"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_below="@+id/card_bus_no">
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/txtInBus"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="In-Bus"/>
+                android:text="@string/in_bus"/>
 
             <TextView
+                android:id="@+id/txtDropped"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Dropped"/>
+                android:text="@string/dropped"/>
 
             <TextView
+                android:id="@+id/txtAbsent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Absent"/>
+                android:text="@string/absent"/>
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 
 </android.support.v7.widget.CardView>

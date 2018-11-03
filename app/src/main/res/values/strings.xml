@@ -27,4 +27,7 @@
     <string name="drop_off">Drop off</string>
     <string name="save">Save</string>
     <string name="school">School:</string>
+    <string name="in_bus">In-Bus</string>
+    <string name="dropped">Dropped</string>
+    <string name="absent">Absent</string>
 </resources>

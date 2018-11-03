@@ -126,7 +126,7 @@ public class AddChildActivity extends AppCompatActivity {
 
         mProgressBar.setVisibility(View.VISIBLE);
         String id = mDatabaseChildren.push().getKey();
-        Child child = new Child(id, firstName, lastName, mDriverId);
+        Child child = new Child(id, firstName, lastName, mDriverId, "dropped");
         mDatabaseChildren.child(id).setValue(child).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {

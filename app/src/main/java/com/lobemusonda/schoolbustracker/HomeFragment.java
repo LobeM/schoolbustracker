@@ -72,6 +72,10 @@ public class HomeFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        getChildren();
+    }
+
+    public void getChildren() {
         mProgressBar.setVisibility(View.VISIBLE);
         mDatabaseChildren.addValueEventListener(new ValueEventListener() {
             @Override

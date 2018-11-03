@@ -1,9 +1,12 @@
 package com.lobemusonda.schoolbustracker;
 
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,7 +27,7 @@ public class ChildrenAdapter extends RecyclerView.Adapter<ChildrenAdapter.Childr
     private OnItemClickListener mListener;
 
     private FirebaseAuth mAuth;
-    private DatabaseReference mDatabaseReference;
+    private DatabaseReference mDatabaseUsers;
 
     public void setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
@@ -37,14 +40,18 @@ public class ChildrenAdapter extends RecyclerView.Adapter<ChildrenAdapter.Childr
 
 
     public static class ChildrenViewHolder extends RecyclerView.ViewHolder {
-        public TextView mChildName;
-        public TextView mBusNo;
+        private TextView mChildName, mBusNo, mInBus, mDropped, mAbsent;
+        private FrameLayout mColorLabel;
 
         public ChildrenViewHolder(View itemView, final OnItemClickListener listener) {
             super(itemView);
 
             mChildName = itemView.findViewById(R.id.card_name);
             mBusNo = itemView.findViewById(R.id.card_bus_no);
+            mInBus = itemView.findViewById(R.id.txtInBus);
+            mDropped = itemView.findViewById(R.id.txtDropped);
+            mAbsent = itemView.findViewById(R.id.txtAbsent);
+            mColorLabel = itemView.findViewById(R.id.cardColorLabel);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -69,7 +76,7 @@ public class ChildrenAdapter extends RecyclerView.Adapter<ChildrenAdapter.Childr
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.child_item, parent, false);
         ChildrenViewHolder cvh = new ChildrenViewHolder(v, mListener);
         mAuth = FirebaseAuth.getInstance();
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference("users");
+        mDatabaseUsers = FirebaseDatabase.getInstance().getReference("users");
         return cvh;
     }
 
@@ -79,10 +86,28 @@ public class ChildrenAdapter extends RecyclerView.Adapter<ChildrenAdapter.Childr
 
         holder.mChildName.setText(currentItem.getFirstName() + " "+ currentItem.getLastName());
         getBusNo(currentItem.getDriverID(), holder);
+        getStatus(currentItem.getStatus(), holder);
+    }
+
+    private void getStatus(String status, ChildrenViewHolder holder) {
+        switch (status) {
+            case "inBus":
+                holder.mInBus.setTypeface(Typeface.DEFAULT_BOLD);
+                holder.mColorLabel.setBackgroundColor(Color.GREEN);
+                break;
+            case "dropped":
+                holder.mDropped.setTypeface(Typeface.DEFAULT_BOLD);
+                holder.mColorLabel.setBackgroundColor(Color.BLUE);
+                break;
+            case "absent":
+                holder.mAbsent.setTypeface(Typeface.DEFAULT_BOLD);
+                holder.mColorLabel.setBackgroundColor(Color.RED);
+                break;
+        }
     }
 
     private void getBusNo(String driverID, final ChildrenViewHolder holder) {
-        mDatabaseReference.child(driverID).addListenerForSingleValueEvent(new ValueEventListener() {
+        mDatabaseUsers.child(driverID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String busNo = dataSnapshot.child("busNo").getValue(String.class);
