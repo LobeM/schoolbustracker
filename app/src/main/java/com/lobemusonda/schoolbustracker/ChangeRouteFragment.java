@@ -93,19 +93,6 @@ public class ChangeRouteFragment extends Fragment implements LocationListener,
                 mSpinAdapter = new ChildSpinAdapter(getContext(), R.layout.support_simple_spinner_dropdown_item, mChildren);
                 mSpinnerChildren.setAdapter(mSpinAdapter);
                 mProgressBar.setVisibility(View.GONE);
-                mSpinnerChildren.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        Child selectedChild = mChildren.get(i);
-
-                        Toast.makeText(getContext(), selectedChild.getFirstName()+" is selected", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                    }
-                });
             }
 
             @Override
@@ -154,7 +141,7 @@ public class ChangeRouteFragment extends Fragment implements LocationListener,
         }
 
         mProgressBar.setVisibility(View.VISIBLE);
-        ChildLocation childLocation = new ChildLocation(childID, pickUp, dropOff);
+        ChildLocation childLocation = new ChildLocation(mAuth.getCurrentUser().getUid(), pickUp, dropOff);
         mDatabaseLocation.child(driverID).child(childID).setValue(childLocation)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
