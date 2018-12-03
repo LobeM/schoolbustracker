@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -35,6 +36,7 @@ public class GetNearByPlaces extends AsyncTask<Object, String, String> {
 
     private Spinner mSpinnerPickUp;
     private Spinner mSpinnerDropOff;
+    private ProgressBar mProgressBar;
     private String mURL;
     private InputStream is;
     private BufferedReader mBufferedReader;
@@ -55,6 +57,7 @@ public class GetNearByPlaces extends AsyncTask<Object, String, String> {
         mURL = (String) objects[0];
         mSpinnerPickUp = (Spinner) objects[1];
         mSpinnerDropOff = (Spinner) objects[2];
+        mProgressBar = (ProgressBar) objects[3];
 
         mStations = new ArrayList<>();
 
@@ -111,6 +114,7 @@ public class GetNearByPlaces extends AsyncTask<Object, String, String> {
             mSpinAdapter = new SpinAdapter(mContext, R.layout.support_simple_spinner_dropdown_item, mStations);
             mSpinnerPickUp.setAdapter(mSpinAdapter);
             mSpinnerDropOff.setAdapter(mSpinAdapter);
+            mProgressBar.setVisibility(View.GONE);
 
         } catch (JSONException e) {
             e.printStackTrace();

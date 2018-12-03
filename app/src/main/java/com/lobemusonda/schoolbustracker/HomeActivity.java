@@ -70,7 +70,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         switch (item.getItemId()) {
             case R.id.nav_request_absence:
-                Toast.makeText(this, "Request absence", Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new AbsenceFragment()).commit();
                 break;
             case R.id.nav_change_route:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

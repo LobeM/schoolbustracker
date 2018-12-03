@@ -1,7 +1,7 @@
-#Sat Nov 03 17:45:43 CAT 2018
+#Mon Dec 03 11:31:44 CAT 2018
 base.0=/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ef3342a9ef5c861521f05516b2fba017b632aa25
-renamed.1=classes2.dex
-renamed.0=classes.dex
+renamed.1=classes.dex
+renamed.0=classes2.dex
 file.1=/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e654dd580c5cf39c181a0f163911f75de997eb18/classes.dex
 base.1=/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e654dd580c5cf39c181a0f163911f75de997eb18
 file.0=/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ef3342a9ef5c861521f05516b2fba017b632aa25/classes.dex

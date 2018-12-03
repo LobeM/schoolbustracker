@@ -422,14 +422,14 @@ public final class R {
         public static final int normal = 0x7f0f0034;
         public static final int omnibox_title_section = 0x7f0f0089;
         public static final int omnibox_url_section = 0x7f0f008a;
-        public static final int place_autocomplete_clear_button = 0x7f0f0157;
-        public static final int place_autocomplete_powered_by_google = 0x7f0f0159;
-        public static final int place_autocomplete_prediction_primary_text = 0x7f0f015b;
-        public static final int place_autocomplete_prediction_secondary_text = 0x7f0f015c;
-        public static final int place_autocomplete_progress = 0x7f0f015a;
-        public static final int place_autocomplete_search_button = 0x7f0f0155;
-        public static final int place_autocomplete_search_input = 0x7f0f0156;
-        public static final int place_autocomplete_separator = 0x7f0f0158;
+        public static final int place_autocomplete_clear_button = 0x7f0f015a;
+        public static final int place_autocomplete_powered_by_google = 0x7f0f015c;
+        public static final int place_autocomplete_prediction_primary_text = 0x7f0f015e;
+        public static final int place_autocomplete_prediction_secondary_text = 0x7f0f015f;
+        public static final int place_autocomplete_progress = 0x7f0f015d;
+        public static final int place_autocomplete_search_button = 0x7f0f0158;
+        public static final int place_autocomplete_search_input = 0x7f0f0159;
+        public static final int place_autocomplete_separator = 0x7f0f015b;
         public static final int plain = 0x7f0f0082;
         public static final int production = 0x7f0f0092;
         public static final int progressBar = 0x7f0f00df;
@@ -472,11 +472,11 @@ public final class R {
         public static final int cast_mini_controller = 0x7f040024;
         public static final int cast_tracks_chooser_dialog_layout = 0x7f040025;
         public static final int cast_tracks_chooser_dialog_row_layout = 0x7f040026;
-        public static final int place_autocomplete_fragment = 0x7f040050;
-        public static final int place_autocomplete_item_powered_by_google = 0x7f040051;
-        public static final int place_autocomplete_item_prediction = 0x7f040052;
-        public static final int place_autocomplete_progress = 0x7f040053;
-        public static final int wallet_test_layout = 0x7f040059;
+        public static final int place_autocomplete_fragment = 0x7f040052;
+        public static final int place_autocomplete_item_powered_by_google = 0x7f040053;
+        public static final int place_autocomplete_item_prediction = 0x7f040054;
+        public static final int place_autocomplete_progress = 0x7f040055;
+        public static final int wallet_test_layout = 0x7f04005b;
     }
     public static final class string {
         public static final int cast_ad_label = 0x7f080013;
@@ -495,8 +495,8 @@ public final class R {
         public static final int cast_forward_10 = 0x7f08001f;
         public static final int cast_forward_30 = 0x7f080020;
         public static final int cast_intro_overlay_button_text = 0x7f080021;
-        public static final int cast_invalid_stream_duration_text = 0x7f080080;
-        public static final int cast_invalid_stream_position_text = 0x7f080081;
+        public static final int cast_invalid_stream_duration_text = 0x7f080082;
+        public static final int cast_invalid_stream_position_text = 0x7f080083;
         public static final int cast_mute = 0x7f080022;
         public static final int cast_notification_connected_message = 0x7f080023;
         public static final int cast_notification_connecting_message = 0x7f080024;
@@ -546,9 +546,9 @@ public final class R {
         public static final int s4 = 0x7f080064;
         public static final int s5 = 0x7f080065;
         public static final int s6 = 0x7f080066;
-        public static final int tagmanager_preview_dialog_button = 0x7f0800a2;
-        public static final int tagmanager_preview_dialog_message = 0x7f0800a3;
-        public static final int tagmanager_preview_dialog_title = 0x7f0800a4;
+        public static final int tagmanager_preview_dialog_button = 0x7f0800a6;
+        public static final int tagmanager_preview_dialog_message = 0x7f0800a7;
+        public static final int tagmanager_preview_dialog_title = 0x7f0800a8;
         public static final int wallet_buy_button_place_holder = 0x7f080069;
     }
     public static final class style {

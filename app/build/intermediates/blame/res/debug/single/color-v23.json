@@ -24,10 +24,6 @@
         "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/color-v23/abc_btn_colored_text_material.xml"
     },
     {
-        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
-        "source": "/Users/lobemusonda/.android/build-cache/313185a7b7456ebf3354679ef2147da75abbf7bf/output/res/color-v23/abc_tint_switch_thumb.xml"
-    },
-    {
         "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
         "source": "/Users/lobemusonda/.android/build-cache/5c7d6287e899e3e7c34bebf29976c243a4e851c5/output/res/color-v23/abc_tint_edittext.xml"
     },

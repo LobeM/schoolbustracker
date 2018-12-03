@@ -113,10 +113,12 @@ public class ChangeRouteFragment extends Fragment implements LocationListener,
 
         String url = stringBuilder.toString();
 
-        Object dataTransfer[] = new Object[3];
+        Object dataTransfer[] = new Object[4];
         dataTransfer[0] = url;
         dataTransfer[1] = mSpinnerPickUp;
         dataTransfer[2] = mSpinnerDropOff;
+        dataTransfer[3] = mProgressBar;
+        mProgressBar.setVisibility(View.VISIBLE);
 
         GetNearByPlaces getNearByPlaces = new GetNearByPlaces(getContext());
         getNearByPlaces.execute(dataTransfer);

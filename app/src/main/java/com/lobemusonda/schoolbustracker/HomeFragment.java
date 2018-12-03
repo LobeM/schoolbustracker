@@ -77,7 +77,7 @@ public class HomeFragment extends Fragment {
 
     public void getChildren() {
         mProgressBar.setVisibility(View.VISIBLE);
-        mDatabaseChildren.addValueEventListener(new ValueEventListener() {
+        mDatabaseChildren.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 mChild.clear();

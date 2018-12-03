@@ -181,6 +181,7 @@ ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/mai
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:43:19-51
 uses-sdk
 INJECTED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] /Users/lobemusonda/.android/build-cache/e3e1863f5edc9d27605ac06c34e2bfc0656c2382/output/AndroidManifest.xml:18:5-42
 MERGED from [com.android.support:design:26.1.0] /Users/lobemusonda/.android/build-cache/50f596f1cab3bf814015c1b3f31c3f23adce3bca/output/AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:transition:26.1.0] /Users/lobemusonda/.android/build-cache/abc3453522a2144d9344f57f7cd7cc7aacf07bc2/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/lobemusonda/.android/build-cache/780965e08eeb79abf960f0e50313ffc30ce794bc/output/AndroidManifest.xml:5:5-7:41
