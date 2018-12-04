@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:2:1-46:12
+ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:2:1-48:12
 	package
-		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:3:5-47
+		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:3:11-53
 		INJECTED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -14,7 +14,7 @@ ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/mai
 		INJECTED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:5:5-67
+ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:5:5-66
 MERGED from [com.google.android.gms:play-services-ads-lite:11.4.0] /Users/lobemusonda/.android/build-cache/2cd10049779759439d3dd2f3479f91041009091e/output/AndroidManifest.xml:19:5-66
 MERGED from [com.google.android.gms:play-services-analytics:11.4.0] /Users/lobemusonda/.android/build-cache/c3da1e31c2c83fc74d41ba37347eaaa0cc9eb256/output/AndroidManifest.xml:20:5-66
 MERGED from [com.google.android.gms:play-services-appinvite:11.4.0] /Users/lobemusonda/.android/build-cache/5d0dbbcd00b2526eb0747cc43b0a5c68ea7f318b/output/AndroidManifest.xml:18:5-66
@@ -30,15 +30,15 @@ MERGED from [com.google.firebase:firebase-iid:11.4.0] /Users/lobemusonda/.androi
 	android:name
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:6:5-79
+ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:6:5-78
 	android:name
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:6:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:7:5-81
+ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:7:5-80
 	android:name
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:7:22-78
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:8:5-79
+ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:8:5-78
 MERGED from [com.google.android.gms:play-services-ads-lite:11.4.0] /Users/lobemusonda/.android/build-cache/2cd10049779759439d3dd2f3479f91041009091e/output/AndroidManifest.xml:20:5-78
 MERGED from [com.google.android.gms:play-services-analytics:11.4.0] /Users/lobemusonda/.android/build-cache/c3da1e31c2c83fc74d41ba37347eaaa0cc9eb256/output/AndroidManifest.xml:21:5-78
 MERGED from [com.google.android.gms:play-services-nearby:11.4.0] /Users/lobemusonda/.android/build-cache/a69aa1280eaa68343c9019c1ff798fe5ea31e2c1/output/AndroidManifest.xml:4:5-78
@@ -51,7 +51,7 @@ MERGED from [com.google.firebase:firebase-iid:11.4.0] /Users/lobemusonda/.androi
 	android:name
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:8:22-76
 application
-ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:10:5-44:19
+ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:10:5-46:19
 MERGED from [com.android.support:design:26.1.0] /Users/lobemusonda/.android/build-cache/50f596f1cab3bf814015c1b3f31c3f23adce3bca/output/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:transition:26.1.0] /Users/lobemusonda/.android/build-cache/abc3453522a2144d9344f57f7cd7cc7aacf07bc2/output/AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/lobemusonda/.android/build-cache/780965e08eeb79abf960f0e50313ffc30ce794bc/output/AndroidManifest.xml:9:5-20
@@ -125,13 +125,13 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/lobemusonda/.android/b
 	android:theme
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:16:9-40
 meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:17:9-19:71
+ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:17:9-19:70
 	android:value
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:19:13-68
 	android:name
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:18:13-58
 meta-data#com.google.android.gms.version
-ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:20:9-22:69
+ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:20:9-22:68
 MERGED from [com.google.android.gms:play-services-basement:11.4.0] /Users/lobemusonda/.android/build-cache/d7a84c5578f6289c42b5ae23888820ebbb1411d5/output/AndroidManifest.xml:20:9-121
 	android:value
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:22:13-66
@@ -146,42 +146,46 @@ ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/mai
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:27:13-31:29
 action#android.intent.action.MAIN
-ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:28:17-69
+ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:28:17-68
 	android:name
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:28:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:30:17-77
+ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:30:17-76
 	android:name
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:30:27-74
 activity#com.lobemusonda.schoolbustracker.LoginActivity
-ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:33:9-35:59
+ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:33:9-35:58
 	android:theme
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:35:13-56
 	android:name
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:34:13-42
 activity#com.lobemusonda.schoolbustracker.SignUpActivity
-ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:36:9-38:59
+ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:36:9-38:58
 	android:theme
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:38:13-56
 	android:name
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:37:13-43
 activity#com.lobemusonda.schoolbustracker.HomeActivity
-ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:39:9-41:59
+ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:39:9-41:58
 	android:theme
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:41:13-56
 	android:name
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:40:13-41
 activity#com.lobemusonda.schoolbustracker.MapActivity
-ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:42:9-49
+ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:42:9-48
 	android:name
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:42:19-46
 activity#com.lobemusonda.schoolbustracker.AddChildActivity
-ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:43:9-63
+ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:43:9-53
 	android:name
 		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:43:19-51
+activity#com.lobemusonda.schoolbustracker.RecoveryActivity
+ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:44:9-45:20
+	android:name
+		ADDED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml:44:19-51
 uses-sdk
 INJECTED from /Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:multidex:1.0.1] /Users/lobemusonda/.android/build-cache/e3e1863f5edc9d27605ac06c34e2bfc0656c2382/output/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:multidex:1.0.0] /Users/lobemusonda/.android/build-cache/51ec9623264ac3196e87f29c3ed92e7796807787/output/AndroidManifest.xml:18:5-42
 MERGED from [com.android.support:design:26.1.0] /Users/lobemusonda/.android/build-cache/50f596f1cab3bf814015c1b3f31c3f23adce3bca/output/AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:transition:26.1.0] /Users/lobemusonda/.android/build-cache/abc3453522a2144d9344f57f7cd7cc7aacf07bc2/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/lobemusonda/.android/build-cache/780965e08eeb79abf960f0e50313ffc30ce794bc/output/AndroidManifest.xml:5:5-7:41

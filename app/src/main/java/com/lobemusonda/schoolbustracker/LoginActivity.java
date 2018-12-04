@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,6 +28,8 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText mEditTextEmail, mEditTextPassword;
     ProgressBar mProgressBar;
+    Button mLoginBtn;
+    TextView mForgotPassTxt, mCreateAccTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +41,38 @@ public class LoginActivity extends AppCompatActivity {
         mEditTextEmail = findViewById(R.id.editTextEmail);
         mEditTextPassword = findViewById(R.id.editTextPassword);
         mProgressBar = findViewById(R.id.progressBar);
+        mForgotPassTxt = findViewById(R.id.txt_forgot_password);
+        mCreateAccTxt = findViewById(R.id.txt_create_account);
+        mLoginBtn = findViewById(R.id.login);
 
-        Button login = findViewById(R.id.login);
-        login.setOnClickListener(new View.OnClickListener() {
+        mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 userLogin();
             }
         });
+        mForgotPassTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callRecovery();
+            }
+        });
+        mCreateAccTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callSignUp();
+            }
+        });
+    }
+
+    private void callSignUp() {
+        Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+        startActivity(intent);
+    }
+
+    private void callRecovery() {
+        Intent intent = new Intent(LoginActivity.this, RecoveryActivity.class);
+        startActivity(intent);
     }
 
     private void userLogin() {
@@ -77,6 +104,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         mProgressBar.setVisibility(View.VISIBLE);
+        mLoginBtn.setEnabled(false);
 
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -97,6 +125,7 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             mProgressBar.setVisibility(View.GONE);
+                            mLoginBtn.setEnabled(true);
                             String value = dataSnapshot.getValue(String.class);
                             if (value.equals("parent")) {
                                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);

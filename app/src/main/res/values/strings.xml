@@ -4,10 +4,9 @@
     <string name="login">Login</string>
     <string name="sign_up">Sign up</string>
     <string name="add_child">Add child</string>
-    <string name="full_name">full name</string>
+    <string name="full_name">Full Name</string>
     <string name="first_name">First name</string>
     <string name="last_name">Last name</string>
-    <string name="email_txt">email</string>
     <string name="password_txt">password</string>
     <string name="bus_no_title">Bus number:</string>
     <string name="bus_no">Searching…</string>
@@ -36,4 +35,13 @@
     <string name="absent_children">Absent Children:</string>
     <string name="add_absent">Add Absent</string>
     <string name="remove">Remove</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="new_password">New Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="change_password">Change Password</string>
+    <string name="email">Email</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="create_account">Create account</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="recovery_message">A recovery link has been sent to your email. Check for steps to reset password and log in.</string>
 </resources>

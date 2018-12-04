@@ -28,6 +28,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     EditText mEditTextEmail, mEditTextPassword, mEditTextFullName;
     ProgressBar mProgressBar;
+    Button mSignUpBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +43,8 @@ public class SignUpActivity extends AppCompatActivity {
         mEditTextPassword = findViewById(R.id.editTextPassword);
         mProgressBar = findViewById(R.id.progressBar);
 
-        Button signUp = findViewById(R.id.buttonSignUp);
-        signUp.setOnClickListener(new View.OnClickListener() {
+        mSignUpBtn = findViewById(R.id.buttonSignUp);
+        mSignUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 registerUser();
@@ -87,6 +88,7 @@ public class SignUpActivity extends AppCompatActivity {
         }
 
         mProgressBar.setVisibility(View.VISIBLE);
+        mSignUpBtn.setEnabled(false);
         mUser = new User();
 
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -127,6 +129,7 @@ public class SignUpActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     mProgressBar.setVisibility(View.GONE);
+                    mSignUpBtn.setEnabled(true);
                     if (task.isSuccessful()){
                         Intent intent = new Intent(SignUpActivity.this, HomeActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

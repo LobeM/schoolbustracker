@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_custom.xml",
-        "source": "/Users/lobemusonda/.android/build-cache/34384d4501feb4aadf5c47b3da06bc85b263f369/output/res/layout/notification_template_big_media_custom.xml"
-    },
-    {
         "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/layout/mr_volume_control.xml",
         "source": "/Users/lobemusonda/.android/build-cache/deac282100992f6ec9c1f2475968796c0e61033b/output/res/layout/mr_volume_control.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_custom.xml",
+        "source": "/Users/lobemusonda/.android/build-cache/34384d4501feb4aadf5c47b3da06bc85b263f369/output/res/layout/notification_template_big_media_custom.xml"
     },
     {
         "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
@@ -294,6 +294,10 @@
     {
         "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/layout/mr_playback_control.xml",
         "source": "/Users/lobemusonda/.android/build-cache/deac282100992f6ec9c1f2475968796c0e61033b/output/res/layout/mr_playback_control.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/layout/activity_recovery.xml",
+        "source": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/src/main/res/layout/activity_recovery.xml"
     },
     {
         "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/layout/cast_tracks_chooser_dialog_layout.xml",

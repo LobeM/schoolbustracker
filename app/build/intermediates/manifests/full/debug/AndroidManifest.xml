@@ -61,6 +61,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.lobemusonda.schoolbustracker.MapActivity" />
         <activity android:name="com.lobemusonda.schoolbustracker.AddChildActivity" />
+        <activity android:name="com.lobemusonda.schoolbustracker.RecoveryActivity" >
+        </activity>
 
         <meta-data
             android:name="android.support.VERSION"
