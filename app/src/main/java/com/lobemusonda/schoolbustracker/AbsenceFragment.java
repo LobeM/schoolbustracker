@@ -101,6 +101,8 @@ public class AbsenceFragment extends Fragment {
         mProgressBar.setVisibility(View.VISIBLE);
         selectedChild.setStatus("absent");
         final String childID = selectedChild.getChildId();
+        final String driverID = selectedChild.getDriverID();
+
         mDatabase.getReference("absent").child(mAuth.getCurrentUser().getUid())
                 .child(childID)
                 .removeValue()
@@ -108,6 +110,8 @@ public class AbsenceFragment extends Fragment {
             @Override
             public void onSuccess(Void aVoid) {
                 updateChild(childID, "dropped");
+
+                updateLocations(driverID, childID, "dropped");
             }
         });
     }
@@ -125,6 +129,7 @@ public class AbsenceFragment extends Fragment {
         mProgressBar.setVisibility(View.VISIBLE);
         selectedChild.setStatus("absent");
         final String childID = selectedChild.getChildId();
+        final String driverID = selectedChild.getDriverID();
 
         mDatabase.getReference("absent").child(mAuth.getCurrentUser().getUid())
                 .child(childID)
@@ -133,8 +138,14 @@ public class AbsenceFragment extends Fragment {
             @Override
             public void onSuccess(Void aVoid) {
                 updateChild(childID, "absent");
+                updateLocations(driverID, childID, "absent");
             }
         });
+    }
+
+    private void updateLocations(String driverID, String childID, String status) {
+        mDatabase.getReference("locations").child(driverID).child(childID)
+                .child("status").setValue(status);
     }
 
     private void updateChild(String childID, String status) {
