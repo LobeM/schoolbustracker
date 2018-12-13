@@ -143,7 +143,7 @@ public class ChangeRouteFragment extends Fragment implements LocationListener,
         }
 
         mProgressBar.setVisibility(View.VISIBLE);
-        ChildLocation childLocation = new ChildLocation(mAuth.getCurrentUser().getUid(), pickUp, dropOff);
+        ChildLocation childLocation = new ChildLocation(mAuth.getCurrentUser().getUid(), pickUp, dropOff, selectedChild.getStatus());
         mDatabaseLocation.child(driverID).child(childID).setValue(childLocation)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override

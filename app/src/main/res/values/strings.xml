@@ -40,8 +40,13 @@
     <string name="old_password">Old Password</string>
     <string name="change_password">Change Password</string>
     <string name="email">Email</string>
-    <string name="forgot_password">Forgot password?</string>
-    <string name="create_account">Create account</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="create_account">Create Account</string>
     <string name="reset_password">Reset Password</string>
     <string name="recovery_message">A recovery link has been sent to your email. Check for steps to reset password and log in.</string>
+    <string name="speed">0 kph</string>
+    <string name="home">Home</string>
+    <string name="request_absence">Request absence</string>
+    <string name="change_route">Change Route</string>
+    <string name="logout">Logout</string>
 </resources>

@@ -7,23 +7,28 @@
         android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:title="Home">
+            android:title="@string/home"
+            android:icon="@drawable/ic_home_black">
         </item>
         <item
             android:id="@+id/nav_request_absence"
-            android:title="Request absence">
+            android:title="@string/request_absence"
+            android:icon="@drawable/ic_person_pin_black">
         </item>
         <item
             android:id="@+id/nav_change_route"
-            android:title="Change Route">
+            android:title="@string/change_route"
+            android:icon="@drawable/ic_directions_black">
         </item>
         <item
             android:id="@+id/nav_messages"
-            android:title="Messages">
+            android:title="Messages"
+            android:icon="@drawable/ic_message_black">
         </item>
         <item
             android:id="@+id/nav_change_password"
-            android:title="Change Password">
+            android:title="@string/action_settings"
+            android:icon="@drawable/ic_settings_black">
         </item>
     </group>
     <group
@@ -31,7 +36,7 @@
         android:checkableBehavior="none">
         <item
             android:id="@+id/nav_logout"
-            android:title="Logout">
+            android:title="@string/logout">
         </item>
     </group>
 </menu>

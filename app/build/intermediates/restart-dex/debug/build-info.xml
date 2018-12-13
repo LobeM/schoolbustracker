@@ -6,26 +6,26 @@
     density="xhdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1544608694088"
+    timestamp="1544702019323"
     token="3287428167279366940"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="509" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="79" />
+        duration="0" />
     <task
         name="verifier"
-        duration="30" />
+        duration="0" />
 
     <artifact
-        location="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-        type="SPLIT" />
+        location="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/outputs/apk/app-debug.apk"
+        type="SPLIT_MAIN" />
     <artifact
         location="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
         type="SPLIT" />
@@ -54,19 +54,19 @@
         location="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        location="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/outputs/apk/app-debug.apk"
-        type="SPLIT_MAIN" />
+        location="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1544608694088"
+        timestamp="1544702019323"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
+            location="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/outputs/apk/app-debug.apk"
+            type="SPLIT_MAIN" />
         <artifact
             location="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
@@ -95,11 +95,11 @@
             location="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/outputs/apk/app-debug.apk"
-            type="SPLIT_MAIN" />
+            location="/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>

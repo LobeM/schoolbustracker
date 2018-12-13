@@ -1,5 +1,29 @@
 [
     {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_directions_black.xml",
+        "source": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_directions_black.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_settings_black.xml",
+        "source": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_settings_black.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_person_outline_black.xml",
+        "source": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_person_outline_black.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_home_black.xml",
+        "source": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_home_black.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_person_pin_black.xml",
+        "source": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_person_pin_black.xml"
+    },
+    {
+        "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_message_black.xml",
+        "source": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_message_black.xml"
+    },
+    {
         "merged": "/Users/lobemusonda/AndroidStudioProjects/SchoolBusTracker/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
         "source": "/Users/lobemusonda/.android/build-cache/50f596f1cab3bf814015c1b3f31c3f23adce3bca/output/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
     },

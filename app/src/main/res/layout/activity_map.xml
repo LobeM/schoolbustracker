@@ -20,4 +20,13 @@
             android:layout_height="wrap_content"
             android:text="@string/track"/>
 
+        <TextView
+            android:id="@+id/txt_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonTrackDriver"
+            android:padding="8dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/speed"/>
+
 </RelativeLayout>

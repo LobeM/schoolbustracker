@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -56,6 +57,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private DatabaseReference mDatabaseDriver;
 
     private Button mButtonTrack;
+    private TextView mSpeedTxt;
     
     private boolean mLocationPermissionGranted = false;
     private GoogleMap mMap;
@@ -63,8 +65,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private Marker mDriverLocationMarker;
     private LatLng mDriverlatLng;
 
-    private String mChildId;
-    private String mDriverID;
+    private String mChildId, mDriverID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +81,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         mDatabaseChild = FirebaseDatabase.getInstance().getReference("children").child(mAuth.getCurrentUser().getUid()).child(mChildId);
         mDatabaseDriver = FirebaseDatabase.getInstance().getReference("users").child(mDriverID);
 
+        mSpeedTxt = findViewById(R.id.txt_speed);
         mButtonTrack = findViewById(R.id.buttonTrackDriver);
+
         mButtonTrack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,10 +108,16 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 String status = dataSnapshot.child("status").getValue(String.class);
                 double latitude = dataSnapshot.child("latitude").getValue(double.class);
                 double longitude = dataSnapshot.child("longitude").getValue(double.class);
+                double speedDoub = dataSnapshot.child("speed").getValue(double.class);
+                int speed = (int) Math.round(speedDoub);
+
                 mDriverlatLng = new LatLng(latitude, longitude);
                 if (mDriverLocationMarker != null) {
                     mDriverLocationMarker.remove();
                 }
+
+                mSpeedTxt.setText(speed + " kph");
+
                 if (status.equals("online")) {
                     pinDriverLocation(mDriverlatLng);
                 }
